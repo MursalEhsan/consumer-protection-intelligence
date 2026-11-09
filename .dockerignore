@@ -1,0 +1,49 @@
+.git/
+.gitignore
+.DS_Store
+
+# Secrets and local environment configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.example.*
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python environments and generated caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+
+# Raw data, generated outputs, local databases, and model artifacts
+output/
+data/raw/
+datasets/
+raw/
+*.csv
+*.zip
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+CFPB_DATA_MANIFEST.json
+CFPB_NARRATIVE_MODEL_MANIFEST.json
+CASE_STUDY.md
+checkpoints/
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.part

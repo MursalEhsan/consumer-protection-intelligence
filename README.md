@@ -62,6 +62,7 @@ The database retains only the sampled `Date received`, `Product`, `Sub-product`,
 - [CFPB_SOURCE_ASSESSMENT.md](CFPB_SOURCE_ASSESSMENT.md) — source feasibility and CFPB publication constraints
 - [CFPB_TASK_DEFINITION.md](CFPB_TASK_DEFINITION.md) — current task scope and stop condition
 - [DATA_DICTIONARY.md](DATA_DICTIONARY.md) — source and derived fields
+- [EVALUATION_AUDIT.md](EVALUATION_AUDIT.md) — split, baseline, taxonomy, duplicate, and test-set audit
 - [technical_report.md](technical_report.md) — methods and limitations
 - [model_card.md](model_card.md) — archived narrative classifier evaluation and intended-use boundaries
 - [monitoring_plan.md](monitoring_plan.md) — source and trend monitoring
@@ -73,3 +74,7 @@ The database retains only the sampled `Date received`, `Product`, `Sub-product`,
 - `src/cfpb_source_assessment.py` — reproducible source manifest
 - `src/streamlit_app.py` — loopback-only dashboard with distinct current-trends and archived-text tabs
 - `src/cfpb_narrative_model.py` — official archive ingestion, provenance, leakage checks, training, and evaluation
+
+The SQLite and SQL query logic is implemented in `src/cfpb_pipeline.py`; there are no standalone `.sql` scripts in the source project. No environment-variable template is needed for the current workflow.
+
+`Dockerfile` and `.dockerignore` are included for optional local experimentation only. The project is not deployed, and the intended supported dashboard workflow is `make app`, which binds to loopback.
