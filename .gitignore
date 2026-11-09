@@ -1,0 +1,51 @@
+.DS_Store
+
+# Secrets and local environment configuration
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env.example.*
+.streamlit/secrets.toml
+*.pem
+*.key
+
+# Python environments, bytecode, and test/tool caches
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+*.py[cod]
+
+# Raw data, generated reports, and local databases
+output/
+data/raw/
+datasets/
+raw/
+*.csv
+*.csv.zip
+*.zip
+*.parquet
+*.db
+*.sqlite
+*.sqlite3
+CFPB_DATA_MANIFEST.json
+CASE_STUDY.md
+complaint_model_metadata.json
+CFPB_NARRATIVE_MODEL_MANIFEST.json
+
+# Model artifacts and checkpoints
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+checkpoints/
+
+# Logs and temporary files
+logs/
+*.log
+*.tmp
+*.part
