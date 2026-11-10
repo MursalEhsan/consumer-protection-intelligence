@@ -39,17 +39,6 @@ trends_tab, narrative_tab = st.tabs(
 )
 
 with trends_tab:
-    metrics = st.columns(4)
-    metrics[0].metric("Rows in source archive", f"{summary['row_count']:,}")
-    metrics[1].metric("Local sample rows", f"{summary['sample_row_count']:,}")
-    metrics[2].metric(
-        "Complaint dates",
-        f"{summary['earliest_complaint_date']} to {summary['latest_complaint_date']}",
-    )
-    metrics[3].metric(
-        "Latest complete month", maturity.get("last_complete_month", "Not calculated")
-    )
-
     trends = pd.read_csv(TRENDS_PATH)
     if trends.empty:
         st.warning("No complete-month trend data is available.")
@@ -74,6 +63,35 @@ with trends_tab:
             default=default_issues,
         )
         selected = filtered[filtered["issue"].isin(issues)]
+
+        month_totals = filtered.groupby("complaint_month")["monthly_denominator"].first()
+        selected_range_total = int(month_totals.sum())
+        latest_selected = filtered[
+            filtered["complaint_month"] == selected_months[1]
+        ]
+        latest_total = (
+            int(latest_selected["monthly_denominator"].iloc[0])
+            if not latest_selected.empty
+            else 0
+        )
+        metrics = st.columns(4)
+        metrics[0].metric(
+            "Selected complete months",
+            f"{selected_months[0]} to {selected_months[1]}",
+        )
+        metrics[1].metric(
+            "Complaints in selected range",
+            f"{selected_range_total:,}",
+            help="Sum of each full-source monthly valid-date denominator in the selected range.",
+        )
+        metrics[2].metric(
+            f"Valid-date complaints ({selected_months[1]})",
+            f"{latest_total:,}",
+        )
+        metrics[3].metric(
+            f"Issue labels observed ({selected_months[1]})",
+            f"{latest_selected['issue'].nunique():,}",
+        )
 
         st.subheader("Monthly share of CFPB complaints")
         st.caption(
@@ -104,14 +122,32 @@ with trends_tab:
         )
         if CANDIDATES_PATH.exists():
             candidates = pd.read_csv(CANDIDATES_PATH)
+            candidates = candidates[
+                candidates["complaint_month"].astype(str).between(
+                    selected_months[0], selected_months[1]
+                )
+            ]
             if candidates.empty:
                 st.write("No candidates met the current exploratory threshold.")
             else:
                 st.dataframe(candidates, hide_index=True, width="stretch")
+            st.caption(
+                f"Candidate rows are limited to the selected complete-month range "
+                f"({selected_months[0]} through {selected_months[1]})."
+            )
         else:
             st.info("Candidate output is missing. Run `make run` to regenerate it.")
 
         with st.expander("Structured source and limitations"):
+            st.write(
+                f"Source archive rows: {summary['row_count']:,}; local metadata sample: "
+                f"{summary['sample_row_count']:,} rows."
+            )
+            st.write(
+                f"Complaint dates: {summary['earliest_complaint_date']} to "
+                f"{summary['latest_complaint_date']}; latest complete month: "
+                f"{maturity.get('last_complete_month', 'Not calculated')}."
+            )
             st.write(f"Source: {manifest.get('source', 'CFPB Consumer Complaint Database')}")
             st.write(f"Retrieved: {manifest.get('retrieval_timestamp_utc', 'Not recorded')}")
             st.write(
