@@ -1,80 +1,46 @@
 # Consumer Protection Intelligence
 
-A reproducible, local-only source assessment and aggregate-trend exploration project for the official CFPB Consumer Complaint Database.
+An evidence-led exploration of published CFPB consumer complaints, with separate structured-trend and historical narrative-classification workflows.
 
-## Status and scope
+## Structured-data case study
 
-The project has two separate CFPB data workflows:
+**Question:** How does the mix of published complaint issue labels change over time?
 
-- The **current structured-data pipeline** measures full-archive coverage and descriptive issue trends. Its source snapshot contains no narrative field.
-- The **historical narrative classifier** uses a separate, discontinuous set of official CFPB Narratives Archive exports. It trains a TF-IDF/logistic-regression baseline, uses chronological validation and test periods, and checks exact and approximate cross-split duplicates.
+The latest reproducible local snapshot was retrieved on 2026-11-10 UTC, covers complaints received through 2026-11-09, and includes complete months through 2026-09 under the project's 15-day maturity rule. In September 2026, `Incorrect information on your report` accounted for **371,428 of 660,839 complaints (56.21%)**. The numerator and denominator are full-source monthly aggregates, not counts from the capped 100,000-row sample. See the [dated aggregate report](reports/structured_trends.md) and [monthly-share chart](reports/issue_trends.png).
 
-The narrative model is trained through 2025-10, validated on 2025-11–2025-12, and held out on 2026-01–2026-08-14. It is not evaluated on post-archive narratives or the current structured-data snapshot. See [model_card.md](model_card.md) and the generated `output/cfpb_narrative_model_metrics.json` for measured results. Neither workflow provides market-wide prevalence estimates or verified harm findings.
+No issue met the existing exploratory screening rule in September 2026. Its most recent earlier flag was in June 2026: `Problem with a company's investigation into an existing issue` had 922 of 620,905 complaints (0.1485%), compared with a 0.0621% mean for the same label in June 2021-2025. The label was observed in each of those five comparison months, but similar investigation issue labels are counted separately and are not harmonized. The flag is a review prompt, not evidence of a verified incident or harm.
 
-## What the project does
+The exact SQLite view query is in [`sql/monthly_issue_trends.sql`](sql/monthly_issue_trends.sql) and is executed by [`src/cfpb_pipeline.py`](src/cfpb_pipeline.py). It divides full-source issue counts by full-source valid-date monthly totals. The trend method and limits are summarized in the [technical report](docs/technical_report.md); the [source assessment](docs/CFPB_SOURCE_ASSESSMENT.md) explains CFPB publication and representation caveats.
 
-1. Downloads and hashes the public CFPB bulk archive when a matching local snapshot is not already available.
-2. Streams the full archive in chunks to calculate exact row counts, date coverage, checked-field missingness, monthly issue counts, and yearly issue taxonomies.
-3. Creates a deterministic sample capped at 100,000 rows, removes complaint IDs before persistence, and stores the reduced sample and full-source aggregates in a local SQLite warehouse.
-4. Excludes complaint months until a conservative 15-day publication-maturity cutoff is met.
-5. Produces a monthly trend table, exploratory same-calendar-month issue-share candidates, a source manifest, and a local dashboard.
-6. Separately samples verified archived narratives, records archive coverage and label changes, removes exact and high-similarity cross-period duplicates, and evaluates a TF-IDF/logistic-regression model against a majority baseline.
+## Archived narrative classifier case study
 
-The anomaly candidates are analyst prompts, not confirmed incidents, causal findings, or evidence of harm. The source labels are operational categories, not adjudicated ground truth. CFPB also cautions that complaint data are not representative of all consumer marketplace experiences.
+The separate historical model's committed [evaluation audit](EVALUATION_AUDIT.md) reports 62.94% accuracy on 18,215 held-out archived narratives, versus 3.40% for a training-majority baseline that always predicted `Incorrect information on your report`: a 59.54 percentage-point accuracy difference. The audit confusion matrix arithmetically reconciles to 45.75% accuracy on the 9,053 test rows in the ten named categories, while 50.3% of all test rows map to a heterogeneous `Other` class. These are historical archive results, not current-text performance. A prior exact-dedup-only test result had been inspected before the final duplicate filter was settled, so the holdout is not pristine or confirmatory. See the [model card](docs/model_card.md) and [full audit](EVALUATION_AUDIT.md) for the limitations.
 
-## Run locally
+Structured trend coverage is through 2026-09; the narrative model's selected archive test ends 2026-08-14. The structured source has no narrative text and does not extend the text model's evaluation coverage. The historical metrics above were checked against the committed audit table in this review; generated narrative manifests, samples, and model binaries are local-only and are not included.
 
-Requirements: Python 3.10+ and a local Python environment. The dashboard binds only to `127.0.0.1:8501`.
+## Local reproduction
+
+Requires Python 3.10+ and internet access to retrieve CFPB's public structured archive (about 365 MB compressed at the reviewed URL).
 
 ```bash
-cd consumer-protection-intelligence
 python3 -m venv .venv
 source .venv/bin/activate
 make setup
 make run
-make narrative-model
-make test
 make report
+make test
 make app
 ```
 
-`make run` retrieves the official CFPB structured-data archive when needed and builds local trend outputs. `make narrative-model` retrieves the selected official Narratives Archive ZIP exports when needed, scans them in chunks, and rebuilds the local narrative sample, model, provenance manifest, and evaluation metrics. Both commands use public CFPB sources; they may download large archives and require internet access. Generated datasets, manifests, models, and reports are ignored by Git and are not included in this repository. `make report` regenerates the local `CASE_STUDY.md` after `make run`.
+`make run` scans the public structured archive and produces ignored local aggregates and manifests. `make report` reruns that pipeline and regenerates the aggregate-only report and chart under `reports/`. `make narrative-model` downloads selected official archive exports and rebuilds the historical model; it is not needed to reproduce the structured report and was not run for this review. `make app` binds Streamlit to `127.0.0.1:8501`. No dashboard deployment is configured.
 
-The selected narrative exports do not provide continuous coverage; consult the generated provenance and evaluation outputs before interpreting results. The maximum persisted modeling sample is 100,000 rows before duplicate filtering.
+## Repository map
 
-All analysis and dashboard use are local. No data are uploaded by the project, no external LLM calls are made, and this repository does not publish or deploy results. Dashboard text input is processed by the local model and is not written to the project dataset or model artifacts.
+- [`reports/`](reports/) - dated aggregate-only structured result and chart; no narrative text or complaint IDs
+- [`sql/monthly_issue_trends.sql`](sql/monthly_issue_trends.sql) - SQL view for full-source counts and shares
+- [`EVALUATION_AUDIT.md`](EVALUATION_AUDIT.md) - archived classifier evaluation, baselines, taxonomy shift, and caveats
+- [`docs/`](docs/) - source, data, modeling, and interpretation methods
+- [`docs/development/`](docs/development/) - handoff and interview preparation notes
+- [`src/`](src/) and [`tests/`](tests/) - implementation and regression/unit tests
 
-## Outputs
-
-- `CFPB_DATA_MANIFEST.json` and `output/cfpb_data_quality.json` — generated structured-source provenance and quality details
-- `output/issue_trends_monthly.csv` and `output/emerging_issue_candidates.csv` — generated full-source trends and review prompts
-- `CFPB_NARRATIVE_MODEL_MANIFEST.json` and `output/cfpb_narrative_model_metrics.json` — generated archive provenance and chronological evaluation
-- `complaint_narrative_tfidf_logreg.joblib` — generated local narrative classifier
-- `complaints_warehouse.db` — generated local sample and full-source monthly aggregates in SQLite
-- `CASE_STUDY.md` and `output/issue_trends.png` — generated report and descriptive chart
-
-These are local generated outputs, ignored by Git; regenerate them with the commands above.
-
-The database retains only the sampled `Date received`, `Product`, `Sub-product`, `Issue`, and `Submitted via` fields plus aggregate issue counts and totals. Complaint IDs are used only for deterministic sampling and duplicate checks; they are removed before persistence.
-
-## Key documentation and code
-
-- [CFPB_SOURCE_ASSESSMENT.md](CFPB_SOURCE_ASSESSMENT.md) — source feasibility and CFPB publication constraints
-- [CFPB_TASK_DEFINITION.md](CFPB_TASK_DEFINITION.md) — current task scope and stop condition
-- [DATA_DICTIONARY.md](DATA_DICTIONARY.md) — source and derived fields
-- [EVALUATION_AUDIT.md](EVALUATION_AUDIT.md) — split, baseline, taxonomy, duplicate, and test-set audit
-- [technical_report.md](technical_report.md) — methods and limitations
-- [model_card.md](model_card.md) — archived narrative classifier evaluation and intended-use boundaries
-- [monitoring_plan.md](monitoring_plan.md) — source and trend monitoring
-- [policy_memo.md](policy_memo.md) — interpretation guardrails
-- [demo_walkthrough.md](demo_walkthrough.md) — truthful dashboard demonstration
-- [technical_interview_walkthrough.md](technical_interview_walkthrough.md) — engineering and evidence framing
-- [OVERNIGHT_HANDOFF.md](OVERNIGHT_HANDOFF.md) — execution status, validation, and handoff
-- `src/cfpb_pipeline.py` — full-source chunk scan, sample creation, SQLite, trends, and candidate screening
-- `src/cfpb_source_assessment.py` — reproducible source manifest
-- `src/streamlit_app.py` — loopback-only dashboard with distinct current-trends and archived-text tabs
-- `src/cfpb_narrative_model.py` — official archive ingestion, provenance, leakage checks, training, and evaluation
-
-The SQLite and SQL query logic is implemented in `src/cfpb_pipeline.py`; there are no standalone `.sql` scripts in the source project. No environment-variable template is needed for the current workflow.
-
-`Dockerfile` and `.dockerignore` are included for optional local experimentation only. The project is not deployed, and the intended supported dashboard workflow is `make app`, which binds to loopback.
+Raw exports, local samples, complaint text, generated manifests, databases, and trained model files are excluded from Git.

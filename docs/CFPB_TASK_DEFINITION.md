@@ -13,7 +13,7 @@ The classifier trains on archive narratives received 2024-11 through 2025-10, va
 
 - Source: official [CFPB Consumer Complaint Database Narratives Archive](https://www.consumerfinance.gov/foia-requests/foia-electronic-reading-room/cfpb-consumer-complaint-database-narratives-archive/)
 - Unit: one eligible archived complaint with nonblank narrative, nonblank `Issue`, valid received date, and nonblank Complaint ID.
-- Selected export provenance, coverage, missingness, and yearly taxonomy changes: `CFPB_NARRATIVE_MODEL_MANIFEST.json`.
+- Selected export provenance, coverage, missingness, and yearly taxonomy changes are recorded in the generated local `CFPB_NARRATIVE_MODEL_MANIFEST.json`, not committed.
 - Sampling: deterministic by Complaint ID within chronological split, capped at 100,000 before duplicate removal.
 - Duplicate controls: complaint-ID and exact normalized-text deduplication, plus approximate SimHash word-trigram checks for cross-split near duplicates.
 - Target: `Issue` taxonomy selected from training labels only; all nonselected categories map to an explicit Other class.
@@ -23,7 +23,7 @@ The classifier trains on archive narratives received 2024-11 through 2025-10, va
 - Classifier: TF-IDF word unigrams/bigrams and class-weighted one-vs-rest logistic regression.
 - Baseline: majority-class dummy classifier.
 - Validation and final test are chronological and held out from fitting. Reported metrics include accuracy, macro-F1, weighted-F1, per-class results, and confusion matrices.
-- Exact final evaluation values are in `output/cfpb_narrative_model_metrics.json`; do not quote values from pre-dedup runs or stale artifacts.
+- Exact final evaluation values and caveats are reported in the committed [`EVALUATION_AUDIT.md`](../EVALUATION_AUDIT.md); generated metrics JSON is local-only. Do not quote values from pre-dedup runs or stale artifacts.
 - Input-score outputs are uncalibrated. The model is a baseline, not a production decision system.
 
 ## Structured trend outputs

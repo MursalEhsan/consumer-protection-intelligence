@@ -13,6 +13,31 @@ MANIFEST_PATH = PROJECT_DIR / "CFPB_DATA_MANIFEST.json"
 TRENDS_PATH = OUTPUT_DIR / "issue_trends_monthly.csv"
 CANDIDATES_PATH = OUTPUT_DIR / "emerging_issue_candidates.csv"
 NARRATIVE_METRICS_PATH = OUTPUT_DIR / "cfpb_narrative_model_metrics.json"
+REPORTS_DIR = PROJECT_DIR / "reports"
+PORTFOLIO_REPORT_PATH = REPORTS_DIR / "structured_trends.md"
+PORTFOLIO_CHART_PATH = REPORTS_DIR / "issue_trends.png"
+
+
+def build_trend_chart_data(
+    trends: pd.DataFrame,
+    last_complete_month: str,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    data = trends.copy()
+    data["complaint_month"] = pd.PeriodIndex(data["complaint_month"], freq="M")
+    latest_period = pd.Period(last_complete_month, freq="M")
+    data = data[data["complaint_month"] <= latest_period]
+    recent_trends = data[data["complaint_month"].between(latest_period - 11, latest_period)]
+    top_issues = (
+        recent_trends.groupby("issue", as_index=False)["complaint_count"]
+        .sum()
+        .sort_values("complaint_count", ascending=False)
+        .head(10)
+    )
+    chart_data = data[
+        (data["complaint_month"] >= latest_period - 35)
+        & data["issue"].isin(top_issues["issue"])
+    ].copy()
+    return top_issues, chart_data
 
 
 def generate() -> None:
@@ -31,23 +56,10 @@ def generate() -> None:
     maturity = manifest.get("evaluation_maturity", {})
     latest_month = maturity.get("last_complete_month")
 
-    trends["complaint_month"] = pd.PeriodIndex(trends["complaint_month"], freq="M")
     latest_period = pd.Period(latest_month, freq="M") if latest_month else trends["complaint_month"].max()
-    recent_trends = trends[
-        trends["complaint_month"].between(latest_period - 11, latest_period)
-    ]
-    top_issues = (
-        recent_trends.groupby("issue", as_index=False)["complaint_count"]
-        .sum()
-        .sort_values("complaint_count", ascending=False)
-        .head(10)
-    )
-    top_issue_names = top_issues["issue"].tolist()
-    chart_data = trends[
-        (trends["complaint_month"] >= latest_period - 35)
-        & trends["issue"].isin(top_issue_names)
-    ].copy()
+    top_issues, chart_data = build_trend_chart_data(trends, str(latest_period))
 
+    REPORTS_DIR.mkdir(parents=True, exist_ok=True)
     plt.style.use("seaborn-v0_8-whitegrid")
     fig, ax = plt.subplots(figsize=(11, 6))
     for issue, group in chart_data.groupby("issue"):
@@ -62,7 +74,10 @@ def generate() -> None:
     ax.tick_params(axis="x", rotation=45)
     ax.legend(loc="best", fontsize="small")
     fig.tight_layout()
-    fig.savefig(OUTPUT_DIR / "issue_trends.png", dpi=160, bbox_inches="tight")
+    ax.set_title(
+        f"Monthly share by issue, through {latest_period} (complete months only)"
+    )
+    fig.savefig(PORTFOLIO_CHART_PATH, dpi=160, bbox_inches="tight")
     plt.close(fig)
 
     missingness = summary.get("missingness_rate_by_field", {})
@@ -152,7 +167,7 @@ The following are raw complaint counts over the latest 12 complete months availa
 |---|---:|
 {top_issue_table}
 
-![Monthly share of CFPB complaints by issue](output/issue_trends.png)
+![Monthly share of CFPB complaints by issue](reports/issue_trends.png)
 
 ## Exploratory candidates
 
@@ -175,7 +190,113 @@ make app
 The Streamlit dashboard binds to `127.0.0.1`. Each pipeline retrieves only official public CFPB sources when local files are absent; all analysis remains local with no external LLM calls, upload, publication, or deployment.
 """
     (PROJECT_DIR / "CASE_STUDY.md").write_text(report, encoding="utf-8")
-    print(f"Wrote report to {PROJECT_DIR / 'CASE_STUDY.md'}")
+
+    snapshot_date = summary.get("latest_complaint_date")
+    retrieval_date = manifest.get("retrieval_timestamp_utc", "Not recorded")
+    candidate_rows = candidates[
+        candidates["complaint_month"].astype(str) == str(latest_period)
+    ] if not candidates.empty else pd.DataFrame()
+    candidate_lines = []
+    for row in candidate_rows.itertuples(index=False):
+        candidate_lines.append(
+            f"| {row.issue} | {int(row.complaint_count):,} | "
+            f"{int(row.monthly_denominator):,} | {row.complaint_share:.3%} | "
+            f"{row.seasonal_baseline_share:.3%} | {row.baseline_months} |"
+        )
+    candidate_result = "\n".join(candidate_lines) or (
+        "| No issues met the screening rule in the latest complete month | | | | | |"
+    )
+    most_recent_candidate = (
+        candidates.sort_values("complaint_month").iloc[-1]
+        if not candidates.empty
+        else None
+    )
+    if most_recent_candidate is None:
+        recent_candidate_section = "No issue met the screening rule in the available complete-month trends."
+    else:
+        candidate_month = str(most_recent_candidate["complaint_month"])
+        baseline_months = [
+            month.strip()
+            for month in str(most_recent_candidate["baseline_months"]).split(",")
+            if month.strip()
+        ]
+        if len(baseline_months) == 5:
+            baseline_presence = (
+                "The exact candidate label was observed in all five comparison months."
+            )
+        else:
+            baseline_presence = (
+                f"The exact candidate label was observed in {len(baseline_months)} "
+                "comparison months; absent issue-month rows were not counted as zero."
+            )
+        candidate_period = pd.Period(candidate_month, freq="M")
+        trend_months = pd.PeriodIndex(trends["complaint_month"], freq="M")
+        same_month_related = trends[
+            (trend_months == candidate_period)
+            & trends["issue"].str.contains("investigation", case=False, na=False)
+            & (trends["issue"] != most_recent_candidate["issue"])
+        ].sort_values("complaint_count", ascending=False)
+        related_labels = ", ".join(
+            f"`{row.issue}` ({int(row.complaint_count):,})"
+            for row in same_month_related.itertuples(index=False)
+        )
+        label_note = (
+            f" Other investigation-labeled categories that month were counted separately: "
+            f"{related_labels}."
+            if related_labels
+            else ""
+        )
+        recent_candidate_section = (
+            f"The most recent earlier flag was **{most_recent_candidate['complaint_month']} — "
+            f"{most_recent_candidate['issue']}**: "
+            f"{int(most_recent_candidate['complaint_count']):,} of "
+            f"{int(most_recent_candidate['monthly_denominator']):,} complaints "
+            f"({most_recent_candidate['complaint_share']:.4%}), versus a "
+            f"{most_recent_candidate['seasonal_baseline_share']:.4%} mean across "
+            f"{most_recent_candidate['baseline_months']}. {baseline_presence}{label_note}"
+        )
+    top_issue_lines = "\n".join(
+        f"| {row.issue} | {int(row.complaint_count):,} |"
+        for row in top_issues.head(5).itertuples(index=False)
+    )
+    structured_report = f"""# CFPB structured complaint trends
+
+**Snapshot received-date coverage through:** {snapshot_date}<br>
+**Retrieved:** {retrieval_date}<br>
+**Latest complete complaint month under the maturity rule:** {latest_period}
+
+## What the trend shows
+
+The chart below shows monthly shares for the ten highest-count issue labels over the latest 12 complete months, plotted across the latest 36 complete months. Counts and monthly denominators are full-source aggregates over valid complaint dates, not the capped local sample. Shares are each issue's count divided by all complaints with a valid received date in that calendar month.
+
+![Monthly CFPB complaint shares by issue through {latest_period}](issue_trends.png)
+
+The five largest issue counts across the latest 12 complete months were:
+
+| Issue | Complaint count |
+|---|---:|
+{top_issue_lines}
+
+## Screening result for {latest_period}
+
+The existing exploratory screen requires at least 50 complaints and compares an issue's share with up to five prior **observed** months of the same calendar month. It requires at least three observations and flags a rise of at least three sample standard deviations. This is a prompt for investigation, not a significance test, incident finding, causal result, or evidence of consumer harm.
+
+| Issue | Count | All complaints that month | Observed share | Mean comparison share | Historical months used |
+|---|---:|---:|---:|---:|---|
+{candidate_result}
+
+{recent_candidate_section}
+
+Missing issue-month rows are not zero-filled by the existing comparison; absent rows may reflect zero recorded counts, while changed category labels can split an issue across names. The comparison uses the latest five observed same-calendar-month rows, not necessarily five consecutive calendar years. Interpret any candidate in that light. The screen does not establish representativeness: CFPB complaint data are not a census of consumer experiences.
+
+## Reproduction and method
+
+Run `make run` to download/hash the public CFPB structured archive, scan full-source monthly counts and totals, apply the 15-day completeness rule, and write local aggregates. `make report` regenerates this report and chart from those outputs. The SQLite view is defined in [`sql/monthly_issue_trends.sql`](../sql/monthly_issue_trends.sql) and executed by [`src/cfpb_pipeline.py`](../src/cfpb_pipeline.py). The query divides full-source issue counts by full-source valid-date monthly totals; the 100,000-row sample is stored separately and is not the share denominator.
+
+This report contains aggregate counts only. It does not contain complaint text or identifiers.
+"""
+    PORTFOLIO_REPORT_PATH.write_text(structured_report, encoding="utf-8")
+    print(f"Wrote report to {PORTFOLIO_REPORT_PATH}")
 
 
 if __name__ == "__main__":

@@ -151,13 +151,18 @@ with narrative_tab:
         metric_columns[0].metric(
             "Test accuracy",
             f"{model_result['accuracy']:.3f}",
-            delta=f"{model_result['accuracy'] - baseline_result['accuracy']:+.3f} vs baseline",
+            delta=(
+                f"{(model_result['accuracy'] - baseline_result['accuracy']) * 100:+.2f} "
+                "percentage points vs baseline"
+            ),
         )
         metric_columns[1].metric("Test macro-F1", f"{model_result['macro_f1']:.3f}")
         metric_columns[2].metric("Test rows", f"{model_result['rows']:,}")
         st.caption(
             "Chronological held-out test; issue taxonomy selected using training labels only. "
-            "The test distribution has a high Other/out-of-taxonomy share. Scores are not calibrated."
+            "The training-majority baseline predicts `Incorrect information on your report` "
+            "(the most frequent mapped training label). The test distribution has a high "
+            "Other/out-of-taxonomy share; scores are not calibrated."
         )
         with st.expander("Validation/test evaluation details"):
             for split_name in ("validation", "test"):

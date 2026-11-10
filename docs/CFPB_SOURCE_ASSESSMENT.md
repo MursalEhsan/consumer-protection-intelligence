@@ -15,7 +15,7 @@ A separate official [CFPB Consumer Complaint Database Narratives Archive](https:
 - Full-source monthly issue totals and monthly denominators are computed during the complete archive scan, not from the capped sample.
 - The exact snapshot checksum, retrieval timestamp, row count, date coverage, checked-field missingness, and monthly counts are recorded in `CFPB_DATA_MANIFEST.json`.
 
-The current project's initial full-archive inspection covered 19,020,152 rows from 2011-12-01 through 2026-11-08. Rerunning `make run` refreshes generated metadata from the archive present locally. The current generated manifest is the record of truth for a given run.
+The prior full-archive inspection covered 19,020,152 rows from 2011-12-01 through 2026-11-08. A separate local review run later scanned 19,028,339 rows through 2026-11-09; its ignored manifest and dated aggregate report record those results. Rerunning `make run` refreshes generated metadata from the archive present locally. The generated manifest is the record of truth for a given run.
 
 ## Separate archived narrative source
 

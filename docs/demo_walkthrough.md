@@ -6,11 +6,11 @@ The current structured CFPB database contains no narrative field. Separately, th
 
 ## 0:45-1:30 — Source and limitations
 
-Show `CFPB_SOURCE_ASSESSMENT.md`, `CFPB_DATA_MANIFEST.json`, and `CFPB_NARRATIVE_MODEL_MANIFEST.json`. Distinguish the current structured archive from the separate discontinuous narrative exports. Mention that CFPB complaint data are not representative of all marketplace experiences.
+Start with [`reports/structured_trends.md`](../reports/structured_trends.md) and its chart. The generated full-source manifests are local-only (`CFPB_DATA_MANIFEST.json` and `CFPB_NARRATIVE_MODEL_MANIFEST.json`); do not imply that these are checked into Git. Distinguish the current structured archive from the separate discontinuous narrative exports. Mention that CFPB complaint data are not representative of all marketplace experiences.
 
 ## 1:30-2:20 — Reproducible, local pipelines
 
-Run `make run` for the current structured trends. `make narrative-model` independently rebuilds the historical narrative sample, model, and metrics. Explain the 100,000-row sample cap, chronological splits, duplicate checks, and majority baseline.
+Run `make run` for the current structured trends. `make narrative-model` independently rebuilds the historical narrative sample, model, and metrics; it was not needed to reproduce the public report. Explain the 100,000-row structured sample cap, chronological classifier splits, duplicate checks, and majority baseline.
 
 ## 2:20-3:20 — Trend dashboard
 

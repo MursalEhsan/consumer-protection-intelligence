@@ -18,6 +18,7 @@ SAMPLE_PATH = OUTPUT_DIR / "cfpb_source_sample.parquet"
 SAMPLE_METADATA_PATH = OUTPUT_DIR / "cfpb_source_sample.json"
 DATABASE_PATH = PROJECT_DIR / "complaints_warehouse.db"
 MANIFEST_PATH = PROJECT_DIR / "CFPB_DATA_MANIFEST.json"
+SQL_PATH = PROJECT_DIR / "sql" / "monthly_issue_trends.sql"
 DATA_URL = "https://files.consumerfinance.gov/ccdb/complaints.csv.zip"
 SOURCE_PAGE = "https://www.consumerfinance.gov/data-research/consumer-complaints/"
 SAMPLE_LIMIT = 100_000
@@ -217,24 +218,7 @@ def build_sqlite_warehouse(
             for month, count in metadata["monthly_row_counts"].items()
         ]
     ).to_sql("source_monthly_totals", connection, index=False, if_exists="replace")
-    connection.executescript(
-        """
-        CREATE INDEX IF NOT EXISTS idx_complaint_sample_date
-            ON complaint_sample("Date received");
-        CREATE INDEX IF NOT EXISTS idx_source_issue_month
-            ON source_monthly_issue_counts(month, issue);
-
-        CREATE VIEW vw_monthly_issue_trends AS
-        SELECT
-            i.month AS complaint_month,
-            i.issue AS issue,
-            i.count AS complaint_count,
-            t.complaint_count AS monthly_denominator,
-            1.0 * i.count / t.complaint_count AS complaint_share
-        FROM source_monthly_issue_counts AS i
-        JOIN source_monthly_totals AS t ON i.month = t.month;
-        """
-    )
+    connection.executescript(SQL_PATH.read_text(encoding="utf-8"))
     connection.commit()
     return connection
 
@@ -273,13 +257,17 @@ def find_emerging_issue_candidates(
                     "monthly_denominator": int(row.monthly_denominator),
                     "complaint_share": round(float(row.complaint_share), 6),
                     "seasonal_baseline_share": round(mean_share, 6),
+                    "baseline_months": ", ".join(
+                        baseline["complaint_month"].astype(str).tolist()
+                    ),
                     "seasonal_z_score": round(z_score, 3) if np.isfinite(z_score) else None,
                     "interpretation": "Pattern for analyst investigation; not a verified incident or evidence of harm.",
                 }
             )
     columns = [
         "complaint_month", "issue", "complaint_count", "monthly_denominator",
-        "complaint_share", "seasonal_baseline_share", "seasonal_z_score", "interpretation",
+        "complaint_share", "seasonal_baseline_share", "baseline_months",
+        "seasonal_z_score", "interpretation",
     ]
     if not candidates:
         return pd.DataFrame(columns=columns)

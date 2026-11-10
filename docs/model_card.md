@@ -18,13 +18,13 @@ Do not use for legal, enforcement, credit, consumer eligibility, or company-rank
 - Selected exports scanned: 11,917,416 rows; 1,789,934 met the nonblank narrative/Issue/Complaint ID and valid-date eligibility rule.
 - Selected export batches are discontinuous: 2011-12 through 2018-04, then 2024-11 through 2026-08. The archive page's coverage does not imply usable narrative density in every batch; the August 2026 export contained one eligible narrative.
 - Model partitions: train 2024-11-01–2025-10-31; validation 2025-11-01–2025-12-31; final test 2026-01-01–2026-08-14.
-- The current structured-data snapshot in `CFPB_DATA_MANIFEST.json` extends through received date 2026-11-08 (latest complete trend month 2026-09). That later structured coverage does not extend the narrative model's August 14, 2026 text cutoff.
+- The structured-data snapshot is a separate workflow. The current dated structured aggregate report records coverage through received date 2026-11-09 (latest complete trend month 2026-09); that later structured coverage does not extend the narrative model's August 14, 2026 text cutoff.
 - Sampling was capped at 100,000 before deduplication. Exact duplicate handling removed 28,813 rows; approximate near-duplicate handling removed another 660. Final partitions: 39,760 train, 12,552 validation, 18,215 test (70,527 total).
 - Model taxonomy: top 10 Issue labels in the training sample, each with at least 100 examples; all other source categories map to `Other / outside selected training taxonomy`.
 - Other-class support was 15.8% of training, 22.9% of validation, and 50.3% of test. This strong temporal label-distribution shift and heterogeneous catch-all materially limit interpretation.
 - Complaint IDs support deterministic sampling and duplicate checks but are removed before the sample is persisted. Complaint text remains in ignored local outputs and is not uploaded.
 
-Full archive file provenance, per-export counts and dates, checked-field missingness, yearly taxonomy changes, and duplicate-check details are in `CFPB_NARRATIVE_MODEL_MANIFEST.json`.
+Full archive file provenance, per-export counts and dates, checked-field missingness, yearly taxonomy changes, and duplicate-check details are in the generated local `CFPB_NARRATIVE_MODEL_MANIFEST.json`, which is not included in the repository.
 
 ## Model
 
@@ -32,7 +32,7 @@ Full archive file provenance, per-export counts and dates, checked-field missing
 - Estimator: class-weighted one-vs-rest logistic regression (`C=2`, `liblinear`).
 - Baseline: most-frequent class in training.
 - Leakage controls: duplicate complaint IDs and exact normalized narratives are filtered, keeping the earliest record. A bounded 64-bit SimHash over unique word trigrams checks cross-split candidates at Hamming distance ≤3. Three oversized candidate buckets were skipped; zero matching pairs remained in checked buckets. This approximate method does not prove that all semantically similar narratives are absent.
-- Evaluation: chronological validation and final test; accuracy, macro-F1, weighted-F1, per-class results, and confusion matrices are in `output/cfpb_narrative_model_metrics.json`.
+- Evaluation: chronological validation and final test; accuracy, macro-F1, weighted-F1, per-class results, and confusion matrices are recorded in the [committed evaluation audit](../EVALUATION_AUDIT.md). The generated `output/cfpb_narrative_model_metrics.json` is local-only.
 
 ## Results
 
@@ -63,6 +63,6 @@ make test
 ```
 
 - Model: `complaint_narrative_tfidf_logreg.joblib` (local, ignored)
-- Provenance: `CFPB_NARRATIVE_MODEL_MANIFEST.json`
-- Evaluation: `output/cfpb_narrative_model_metrics.json`
-- Dashboard: local archived-narrative tab in `src/streamlit_app.py`; submitted text is not written to the project dataset or model artifacts.
+- Provenance: generated `CFPB_NARRATIVE_MODEL_MANIFEST.json` (local-only)
+- Evaluation: generated `output/cfpb_narrative_model_metrics.json` (local-only), summarized in the [committed evaluation audit](../EVALUATION_AUDIT.md)
+- Dashboard: local archived-narrative tab in `../src/streamlit_app.py`; submitted text is not written to the project dataset or model artifacts.

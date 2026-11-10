@@ -202,13 +202,12 @@ The previous local smoke-test server on port 8502 was stopped after its check. A
 4. **Medium — dedup changes the evaluation population.** Record per-split counts at every filter stage, skipped short-text counts, cluster membership, and reasons. In future, keep duplicate clusters together when splitting and report both natural-population and duplicate-controlled views; do not retrospectively tune this test.
 5. **Medium — observed-year taxonomy is not a version history.** Archive coverage gaps and partial years make “new/disappeared” string counts ambiguous. Add official dated taxonomy/version evidence and distinguish taxonomy edits from labels not observed in a batch.
 6. **Medium — sampling provenance fields can mislead.** `train_and_evaluate` receives an already deduplicated sample, so its `sampled_rows_by_split` and `deduplicated_rows_by_split` fields are currently identical final counts. Use provenance's `sample_selected_before_duplicate_removal` for the true 60k/20k/20k selected counts; rename or correct the redundant metric fields in a future code change.
-7. **Low — dashboard delta labeling.** “+0.595 vs baseline” is an absolute accuracy difference, or +59.54 percentage points, not a relative percent lift. Future UI copy should state units and show the baseline's macro/weighted F1 alongside model metrics.
+7. **Resolved presentation issue — dashboard delta labeling.** The previous “+0.595 vs baseline” is +59.54 percentage points, not a relative percent lift. The local UI now states percentage-point units and names the training-majority class; its validation/test details include baseline and model metrics. This changes presentation only, not saved model results.
 8. **Resolved operational issue — local CONNECTING state.** The app was stopped, then restarted and browser-verified on loopback. No application exception was found; the dashboard is not left running.
 
 ## Evidence files
 
 - [`src/cfpb_narrative_model.py`](./src/cfpb_narrative_model.py): split, sample, label mapping, duplicate filtering, fit, and evaluation logic.
-- [`CFPB_NARRATIVE_MODEL_MANIFEST.json`](./CFPB_NARRATIVE_MODEL_MANIFEST.json): archive provenance, coverage, taxonomy observations, and filter counters.
-- [`output/cfpb_narrative_model_metrics.json`](./output/cfpb_narrative_model_metrics.json): saved validation/final-test class metrics and confusion matrix.
-- [`output/cfpb_narrative_sample.parquet`](./output/cfpb_narrative_sample.parquet): ignored local final modeling sample used for this audit.
+- `CFPB_NARRATIVE_MODEL_MANIFEST.json` and `output/cfpb_narrative_model_metrics.json`: generated local-only provenance and metrics artifacts; not included in this repository.
+- `output/cfpb_narrative_sample.parquet`: local-only sample containing complaint narratives; intentionally not included in this repository.
 - [`src/streamlit_app.py`](./src/streamlit_app.py): separate current structured-trend and archived-text dashboard surfaces.

@@ -11,6 +11,7 @@ from src.cfpb_pipeline import (
     latest_mature_month,
     load_source_sample,
 )
+from src.generate_report import build_trend_chart_data
 
 
 class CFPBSourcePipelineTests(unittest.TestCase):
@@ -87,9 +88,50 @@ class CFPBSourcePipelineTests(unittest.TestCase):
         )
         candidates = find_emerging_issue_candidates(pd.DataFrame(rows), "2024-01")
         self.assertIn("Issue A", candidates["issue"].tolist())
+        self.assertEqual(
+            candidates.loc[candidates["issue"] == "Issue A", "baseline_months"].iloc[0],
+            "2021-01, 2022-01, 2023-01",
+        )
         self.assertTrue(
             candidates["interpretation"].str.contains("not a verified incident").all()
         )
+
+    def test_candidate_baseline_lists_observed_months_without_zero_filling(self):
+        rows = [
+            {
+                "complaint_month": month,
+                "issue": "Issue A",
+                "complaint_count": count,
+                "monthly_denominator": 1_000,
+                "complaint_share": count / 1_000,
+            }
+            for month, count in (
+                ("2021-01", 100),
+                ("2023-01", 120),
+                ("2024-01", 80),
+                ("2025-01", 500),
+            )
+        ]
+        candidates = find_emerging_issue_candidates(pd.DataFrame(rows), "2025-01")
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(candidates.iloc[0]["baseline_months"], "2021-01, 2023-01, 2024-01")
+
+    def test_report_chart_excludes_later_incomplete_month(self):
+        trends = pd.DataFrame(
+            [
+                {
+                    "complaint_month": month,
+                    "issue": "Issue A",
+                    "complaint_count": count,
+                    "monthly_denominator": 100,
+                    "complaint_share": count / 100,
+                }
+                for month, count in (("2026-08", 10), ("2026-09", 20), ("2026-10", 90))
+            ]
+        )
+        _, chart_data = build_trend_chart_data(trends, "2026-09")
+        self.assertEqual(chart_data["complaint_month"].astype(str).max(), "2026-09")
+        self.assertNotIn("2026-10", chart_data["complaint_month"].astype(str).tolist())
 
 
 if __name__ == "__main__":
