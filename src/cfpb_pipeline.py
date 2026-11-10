@@ -223,16 +223,20 @@ def build_sqlite_warehouse(
     return connection
 
 
-def find_emerging_issue_candidates(
+def screen_issue_month(
     trends: pd.DataFrame,
-    last_complete_month: str,
+    complaint_month: str,
     minimum_count: int = 50,
-) -> pd.DataFrame:
+) -> tuple[pd.DataFrame, dict[str, int]]:
     data = trends.copy()
     data["complaint_month"] = pd.PeriodIndex(data["complaint_month"], freq="M")
-    data = data[data["complaint_month"] <= pd.Period(last_complete_month, freq="M")]
+    data = data.sort_values(["complaint_month", "issue"])
+    target_month = pd.Period(complaint_month, freq="M")
+    data = data[data["complaint_month"] <= target_month]
+    current_month = data[data["complaint_month"] == target_month]
     candidates: list[dict[str, object]] = []
-    for row in data.itertuples(index=False):
+    qualified_count = 0
+    for row in current_month.itertuples(index=False):
         baseline = data[
             (data["issue"] == row.issue)
             & (data["complaint_month"].dt.month == row.complaint_month.month)
@@ -240,6 +244,7 @@ def find_emerging_issue_candidates(
         ].tail(5)
         if len(baseline) < 3 or row.complaint_count < minimum_count:
             continue
+        qualified_count += 1
         mean_share = float(baseline["complaint_share"].mean())
         std_share = float(baseline["complaint_share"].std(ddof=1))
         if std_share == 0:
@@ -269,10 +274,44 @@ def find_emerging_issue_candidates(
         "complaint_share", "seasonal_baseline_share", "baseline_months",
         "seasonal_z_score", "interpretation",
     ]
+    candidate_frame = pd.DataFrame(candidates, columns=columns)
+    if not candidate_frame.empty:
+        candidate_frame = candidate_frame.sort_values(
+            ["complaint_month", "seasonal_z_score"],
+            ascending=[False, False],
+            na_position="last",
+        )
+    return candidate_frame, {
+        "observed_issue_labels": int(current_month["issue"].nunique()),
+        "eligible_issue_labels": qualified_count,
+        "flagged_issue_labels": len(candidate_frame),
+    }
+
+
+def find_emerging_issue_candidates(
+    trends: pd.DataFrame,
+    last_complete_month: str,
+    minimum_count: int = 50,
+) -> pd.DataFrame:
+    data = trends.copy()
+    data["complaint_month"] = pd.PeriodIndex(data["complaint_month"], freq="M")
+    data = data[data["complaint_month"] <= pd.Period(last_complete_month, freq="M")]
+    candidates = [
+        screen_issue_month(data, str(month), minimum_count)[0]
+        for month in sorted(data["complaint_month"].unique())
+    ]
+    candidates = [candidate for candidate in candidates if not candidate.empty]
+    columns = [
+        "complaint_month", "issue", "complaint_count", "monthly_denominator",
+        "complaint_share", "seasonal_baseline_share", "baseline_months",
+        "seasonal_z_score", "interpretation",
+    ]
     if not candidates:
         return pd.DataFrame(columns=columns)
-    return pd.DataFrame(candidates, columns=columns).sort_values(
-        ["complaint_month", "seasonal_z_score"], ascending=[False, False], na_position="last"
+    return pd.concat(candidates, ignore_index=True).sort_values(
+        ["complaint_month", "seasonal_z_score"],
+        ascending=[False, False],
+        na_position="last",
     )
 
 

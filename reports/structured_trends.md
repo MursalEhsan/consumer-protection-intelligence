@@ -6,23 +6,24 @@
 
 ## What the trend shows
 
-The chart below shows monthly shares for the ten highest-count issue labels over the latest 12 complete months, plotted across the latest 36 complete months. Counts and monthly denominators are full-source aggregates over valid complaint dates, not the capped local sample. Shares are each issue's count divided by all complaints with a valid received date in that calendar month.
+The chart below shows the monthly share for `Incorrect information on your report` over the latest 36 complete months. Counts and monthly denominators are full-source aggregates over valid complaint dates, not the capped local sample. Shares are each issue's count divided by all complaints with a valid received date in that calendar month. Missing issue-month observations are shown as gaps.
 
-![Monthly CFPB complaint shares by issue through 2026-09](issue_trends.png)
+![Monthly share of CFPB complaints labeled Incorrect information on your report, with 2026-09 and 2025-09 values marked, over 36 complete months](issue_trends.png)
 
-The five largest issue counts across the latest 12 complete months were:
+## Same-month year-over-year comparison
 
-| Issue | Complaint count |
-|---|---:|
-| Incorrect information on your report | 3,808,603 |
-| Improper use of your report | 1,303,621 |
-| Problem with a company's investigation into an existing problem | 1,212,382 |
-| Attempts to collect debt not owed | 140,627 |
-| Took or threatened to take negative or legal action | 79,878 |
+The SQL query in [`../sql/year_over_year_issue_comparison.sql`](../sql/year_over_year_issue_comparison.sql) compares exact issue-label and calendar-month matches in the full-source aggregates.
+
+| Period | Issue count | Valid-date complaints | Issue share |
+|---|---:|---:|---:|
+| 2026-09 | 371,428 | 660,839 | 56.21% |
+| 2025-09 | 267,731 | 503,847 | 53.14% |
+
+Change in share: **+3.07 pp** (current minus prior-year share). A missing aggregate row remains missing; it is not interpreted as zero.
 
 ## Screening result for 2026-09
 
-The existing exploratory screen requires at least 50 complaints and compares an issue's share with up to five prior **observed** months of the same calendar month. It requires at least three observations and flags a rise of at least three sample standard deviations. This is a prompt for investigation, not a significance test, incident finding, causal result, or evidence of consumer harm.
+The existing exploratory screen observed 89 distinct issue labels in this month. 60 qualified under the count threshold (at least 50) and historical-coverage rule (at least three prior **observed** same-calendar-month rows); 0 were flagged at a rise of at least three sample standard deviations. This is a prompt for investigation, not a significance test, incident finding, causal result, or evidence of consumer harm.
 
 | Issue | Count | All complaints that month | Observed share | Mean comparison share | Historical months used |
 |---|---:|---:|---:|---:|---|
@@ -34,6 +35,6 @@ Missing issue-month rows are not zero-filled by the existing comparison; absent 
 
 ## Reproduction and method
 
-Run `make run` to download/hash the public CFPB structured archive, scan full-source monthly counts and totals, apply the 15-day completeness rule, and write local aggregates. `make report` regenerates this report and chart from those outputs. The SQLite view is defined in [`sql/monthly_issue_trends.sql`](../sql/monthly_issue_trends.sql) and executed by [`src/cfpb_pipeline.py`](../src/cfpb_pipeline.py). The query divides full-source issue counts by full-source valid-date monthly totals; the 100,000-row sample is stored separately and is not the share denominator.
+Run `make run` to download/hash the public CFPB structured archive, scan full-source monthly counts and totals, apply the 15-day completeness rule, and write local aggregates. `make report` regenerates this report and chart from those outputs. The monthly SQLite view is defined in [`../sql/monthly_issue_trends.sql`](../sql/monthly_issue_trends.sql) and executed by [`../src/cfpb_pipeline.py`](../src/cfpb_pipeline.py). The year-over-year query is executed by the report generator against those same full-source aggregates; the 100,000-row sample is stored separately and is not the share denominator.
 
 This report contains aggregate counts only. It does not contain complaint text or identifiers.
