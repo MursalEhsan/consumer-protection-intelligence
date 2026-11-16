@@ -23,3 +23,7 @@ Current state and defects. The existing screen has no event register, predeclare
 
 ## Client brief, engineering, deployment and final verification
 Current state and defects. Review of Makefile, Dockerfile, app and tests shows no offline demo, CI, deployed app, calibrated abstention artifact or decision watchlist. The app stops when the local manifest is missing. Do not tag a release or publish new performance claims before the checks pass.
+
+Detector implementation. Model within-product counts with trend and calendar month, a trailing window, overdispersion and a moment-matched predictive tail. Require two consecutive BH-adjusted upper-tail exceedances. Historical aggregates are from one revised snapshot. Count models remain sensitive to changes in product volume; a within-product share is reported separately. Only two wording families have explicit analyst mappings. Other historical transitions remain unresolved. Perfect-fit warnings occurred for low-variation histories; tail probabilities require empirical validation.
+
+Backtest decision rule, set before calculating the comparison table: retain the legacy rule unless GLM has higher event recall with no higher unmatched annual workload. Rolling z and EWMA are additional comparators. Match event month through the next two months. Count uncovered events as misses, preserve duplicate-series events in the register and report their dependence. Unmatched alerts are a workload proxy, not verified false alarms.
