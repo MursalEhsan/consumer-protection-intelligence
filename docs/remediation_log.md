@@ -14,3 +14,12 @@ PR #1 merged at 2e6a458 after tests passed. The remediation branch incorporates 
 
 ## Fresh evaluation
 Current state and defects. The official CFPB archive currently lists August 2026 as its last export. The historical workflow used November 2024 onward. For a genuinely separate retrospective experiment, reserve August to October 2024; train and validate only before it. Do not examine held-out outcomes before freezing. Archive availability, actual publication timestamps, and independence beyond repository records still require checks.
+
+## Product series and detector
+Current state and defects. The SQL view divides by all products. The earlier rule does compute sample variance but uses very few historical observations. Monthly absence can reflect a taxonomy change; automatic merging by text is unjustified. Build product-denominated aggregates from the full dated structured archive and verify categories against the publisher.
+
+## Backtest and narrative clusters
+Current state and defects. The existing screen has no event register, predeclared event window, spike-injection benchmark or longitudinal cluster alignment. Press releases date announcements; complaints may precede enforcement. Unmatched alerts are not necessarily false positives.
+
+## Client brief, engineering, deployment and final verification
+Current state and defects. Review of Makefile, Dockerfile, app and tests shows no offline demo, CI, deployed app, calibrated abstention artifact or decision watchlist. The app stops when the local manifest is missing. Do not tag a release or publish new performance claims before the checks pass.
