@@ -1,3 +1,4 @@
+import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
@@ -10,8 +11,13 @@ from src.cfpb_pipeline import (
     find_emerging_issue_candidates,
     latest_mature_month,
     load_source_sample,
+    screen_issue_month,
 )
-from src.generate_report import build_trend_chart_data
+from src.generate_report import (
+    build_featured_issue_series,
+    build_trend_chart_data,
+    query_year_over_year_comparison,
+)
 
 
 class CFPBSourcePipelineTests(unittest.TestCase):
@@ -132,6 +138,129 @@ class CFPBSourcePipelineTests(unittest.TestCase):
         _, chart_data = build_trend_chart_data(trends, "2026-09")
         self.assertEqual(chart_data["complaint_month"].astype(str).max(), "2026-09")
         self.assertNotIn("2026-10", chart_data["complaint_month"].astype(str).tolist())
+
+    def test_featured_issue_series_keeps_missing_months_as_gaps_and_excludes_incomplete(self):
+        trends = pd.DataFrame(
+            [
+                {"complaint_month": month, "issue": "Issue A", "complaint_share": share}
+                for month, share in (
+                    ("2025-08", 0.4),
+                    ("2025-10", 0.5),
+                    ("2026-09", 0.6),
+                    ("2026-10", 0.9),
+                )
+            ]
+        )
+        series = build_featured_issue_series(trends, "Issue A", "2026-09")
+        observed = series.set_index(series["complaint_month"].astype(str))
+        self.assertTrue(pd.isna(observed.loc["2025-09", "complaint_share"]))
+        self.assertEqual(series["complaint_month"].astype(str).max(), "2026-09")
+        self.assertNotIn("2026-10", series["complaint_month"].astype(str).tolist())
+
+    def test_year_over_year_comparison_calculates_shares_and_percentage_points(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            database_path = Path(temp_dir) / "comparison.db"
+            with sqlite3.connect(database_path) as connection:
+                connection.executescript(
+                    """
+                    CREATE TABLE source_monthly_issue_counts (
+                        month TEXT, issue TEXT, count INTEGER
+                    );
+                    CREATE TABLE source_monthly_totals (
+                        month TEXT, complaint_count INTEGER
+                    );
+                    INSERT INTO source_monthly_issue_counts VALUES
+                        ('2026-09', 'Issue A', 371428),
+                        ('2025-09', 'Issue A', 267731);
+                    INSERT INTO source_monthly_totals VALUES
+                        ('2026-09', 660839),
+                        ('2025-09', 503847);
+                    """
+                )
+            result = query_year_over_year_comparison(
+                database_path, "Issue A", "2026-09"
+            )
+        self.assertEqual(result["current_issue_count"], 371428)
+        self.assertEqual(result["prior_year_issue_count"], 267731)
+        self.assertAlmostEqual(result["current_issue_share"], 371428 / 660839)
+        self.assertAlmostEqual(result["prior_year_issue_share"], 267731 / 503847)
+        self.assertAlmostEqual(
+            result["share_change_percentage_points"],
+            100 * ((371428 / 660839) - (267731 / 503847)),
+        )
+
+    def test_year_over_year_comparison_surfaces_missing_prior_month(self):
+        with tempfile.TemporaryDirectory() as temp_dir:
+            database_path = Path(temp_dir) / "comparison.db"
+            with sqlite3.connect(database_path) as connection:
+                connection.executescript(
+                    """
+                    CREATE TABLE source_monthly_issue_counts (
+                        month TEXT, issue TEXT, count INTEGER
+                    );
+                    CREATE TABLE source_monthly_totals (
+                        month TEXT, complaint_count INTEGER
+                    );
+                    INSERT INTO source_monthly_issue_counts VALUES
+                        ('2024-07', 'Issue A', 10);
+                    INSERT INTO source_monthly_totals VALUES ('2024-07', 100);
+                    """
+                )
+            result = query_year_over_year_comparison(
+                database_path, "Issue A", "2024-07"
+            )
+        self.assertEqual(result["prior_year_month"], "2023-07")
+        self.assertIsNone(result["prior_year_issue_count"])
+        self.assertIsNone(result["prior_year_total_complaints"])
+        self.assertIsNone(result["prior_year_issue_share"])
+        self.assertIsNone(result["share_change_percentage_points"])
+
+    def test_screen_reports_observed_eligible_and_flagged_issue_counts(self):
+        rows = []
+        for issue, historical_counts, current_count in (
+            ("Eligible", (100, 120, 80), 600),
+            ("Below minimum", (100, 100, 100), 49),
+            ("Insufficient history", (100, 100), 80),
+        ):
+            historical_years = (2021, 2022, 2023)[-len(historical_counts):]
+            rows.extend(
+                {
+                    "complaint_month": f"{year}-01",
+                    "issue": issue,
+                    "complaint_count": count,
+                    "monthly_denominator": 1_000,
+                    "complaint_share": count / 1_000,
+                }
+                for year, count in zip(historical_years, historical_counts)
+            )
+            rows.append(
+                {
+                    "complaint_month": "2024-01",
+                    "issue": issue,
+                    "complaint_count": current_count,
+                    "monthly_denominator": 1_000,
+                    "complaint_share": current_count / 1_000,
+                }
+            )
+        rows.append(
+            {
+                "complaint_month": "2024-02",
+                "issue": "Later incomplete month",
+                "complaint_count": 900,
+                "monthly_denominator": 1_000,
+                "complaint_share": 0.9,
+            }
+        )
+        candidates, counts = screen_issue_month(pd.DataFrame(rows), "2024-01")
+        self.assertEqual(
+            counts,
+            {
+                "observed_issue_labels": 3,
+                "eligible_issue_labels": 1,
+                "flagged_issue_labels": 1,
+            },
+        )
+        self.assertEqual(candidates["issue"].tolist(), ["Eligible"])
 
 
 if __name__ == "__main__":
