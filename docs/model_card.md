@@ -66,3 +66,11 @@ make test
 - Provenance: generated `CFPB_NARRATIVE_MODEL_MANIFEST.json` (local-only)
 - Evaluation: generated `output/cfpb_narrative_model_metrics.json` (local-only), summarized in the [committed evaluation audit](../EVALUATION_AUDIT.md)
 - Dashboard: local archived-narrative tab in `../src/streamlit_app.py`; submitted text is not written to the project dataset or model artifacts.
+
+## Separate frozen evaluation and released model
+
+The table above describes the older archive experiment. The new [classifier evaluation](../reports/classifier_eval.md) uses an earlier, disjoint received-date window selected in [split.yaml](../config/split.yaml). See [frozen choices](../reports/frozen_choices.json), [per-class metrics and intervals](../reports/metrics.json), [calibration](../reports/reliability.png) and [selective accuracy](../reports/coverage_accuracy.png). The test-majority constant is retrospective. Train-majority and stratified baselines use training labels only.
+
+Load the release asset named in [model_asset.json](../config/model_asset.json) with PortableModel in [portable_model.py](../src/portable_model.py). The viewer verifies its checksum. Only hashed feature names and numeric parameters leave the training environment. The sample, texts, IDs, duplicate sketches and raw fitted training bundle stay local. The model uses temperature scaling and a validation-selected threshold; an input containing no known features always abstains. The score interval assumes independent sampled rows and does not account for future drift.
+
+Reproduce the archive comparison in a Python 3.12 environment using requirements-model.lock. Download official archive exports identified in config/split.yaml into an ignored external directory. Run scripts/fresh_eval.py fit DIRECTORY, commit reports/frozen_choices.json, then run scripts/fresh_eval.py evaluate DIRECTORY once. The local evaluation guard prevents accidental repeats. Rerunning on previously scored data reproduces a historical experiment; it does not create another untouched holdout.

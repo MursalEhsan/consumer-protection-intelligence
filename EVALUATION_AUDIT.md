@@ -211,3 +211,9 @@ The previous local smoke-test server on port 8502 was stopped after its check. A
 - `CFPB_NARRATIVE_MODEL_MANIFEST.json` and `output/cfpb_narrative_model_metrics.json`: generated local-only provenance and metrics artifacts; not included in this repository.
 - `output/cfpb_narrative_sample.parquet`: local-only sample containing complaint narratives; intentionally not included in this repository.
 - [`src/streamlit_app.py`](./src/streamlit_app.py): separate current structured-trend and archived-text dashboard surfaces.
+
+## Executable reconciliation and separate experiment
+
+[Historical matrix audit](reports/historical_matrix_audit.json) computes both the conditional accuracies and the retrospective best constant comparator from the matrix printed above. Regenerate it with python src/audit_matrix.py. The strongest constant prediction in hindsight uses test labels. The valid ex ante constant prediction comes from training.
+
+[Fresh evaluation](reports/classifier_eval.md) and [metrics](reports/metrics.json) describe a separate historical window. Its model and confidence policy were selected before opening its reserved test partition. The run commit and test-ID-list digest are recorded with its metrics. Only the digest is published.
