@@ -21,7 +21,7 @@ from sklearn.dummy import DummyClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
-from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import Pipeline, make_pipeline
 from sklearn.svm import LinearSVC
 from fresh_data import CFG, ID, ROOT, TEXT, DuplicateFilter, load_split
 
@@ -32,11 +32,11 @@ CLASSES = sorted(set(MAP["labels"].values()))
 SEED = CFG["seed"]
 
 
-def targets(frame):
+def targets(frame: pd.DataFrame) -> np.ndarray:
     return frame.Issue.map(MAP["labels"]).fillna(MAP["unseen"]).map(CLASSES.index).to_numpy()
 
 
-def embedding(text):
+def embedding(text: pd.Series) -> np.ndarray:
     from sentence_transformers import SentenceTransformer
 
     encoder = SentenceTransformer(
@@ -45,11 +45,11 @@ def embedding(text):
     return encoder.encode(text.tolist(), batch_size=32, normalize_embeddings=True, show_progress_bar=False)
 
 
-def logits(model, x):
+def logits(model: Pipeline, x: pd.Series | np.ndarray) -> np.ndarray:
     return model.decision_function(x)
 
 
-def measures(cm):
+def measures(cm: np.ndarray) -> dict:
     n = cm.sum(1)
     p = cm.sum(0)
     tp = cm.diagonal()
@@ -70,7 +70,7 @@ def measures(cm):
     }
 
 
-def fit(directory):
+def fit(directory: Path) -> None:
     LOCAL.mkdir(parents=True, exist_ok=True)
     filt = DuplicateFilter()
     tr = filt.apply(load_split(directory, "train"))
@@ -128,7 +128,7 @@ def fit(directory):
     (OUT / "frozen_choices.json").write_text(json.dumps(freeze, indent=2) + "\n")
 
 
-def evaluate(directory):
+def evaluate(directory: Path) -> None:
     freeze = json.loads((OUT / "frozen_choices.json").read_text())
     if hashlib.sha256((LOCAL / "frozen.joblib").read_bytes()).hexdigest() != freeze["model_sha256"]:
         raise ValueError("Frozen bundle changed")

@@ -11,7 +11,7 @@ import yaml
 from detector import ROOT
 
 
-def main():
+def main() -> None:
     cfg = yaml.safe_load((ROOT / "config/clusters.yaml").read_text())
     out = ROOT / "reports"
     clusters = pd.read_csv(out / "clusters.csv")
@@ -108,12 +108,16 @@ def main():
         def describe(value):
             return "no matching alert" if pd.isna(value) else f"a match at month offset {int(value)}"
 
+        context = {
+            0: "The CFPB filed a proceeding after the bankruptcy of Synapse, a provider connecting fintech platforms to banks. The bankruptcy preceded the filing, so the filing date can miss the original disruption.",
+            14: "The Wells Fargo order covered auto-loan servicing, including incorrect payment application and fees. An industry-wide series pools many lenders and can obscure firm-specific changes.",
+        }[i]
         cases.extend(
             [
                 "",
                 f"## {e['product']} | {e.date}",
                 "",
-                f"The [public action]({e.source}) was mapped in advance to '{e.issue}'. The narrative method produced {describe(e.cluster_delay)}. The product GLM produced {describe(e.glm_delay)}. Sample density, the available product history and the announcement date limit attribution. The data cannot identify the cause of any miss.",
+                f"{context} The [public action]({e.source}) was mapped in advance to '{e.issue}'. The narrative method produced {describe(e.cluster_delay)}. The product GLM produced {describe(e.glm_delay)}. Sample density, the available product history and the announcement date limit attribution. The data cannot identify the cause of any miss.",
                 "",
                 f"![Complaint counts around the action](case_{i}.png)",
             ]

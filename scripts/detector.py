@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 CFG = yaml.safe_load((ROOT / "config/detector.yaml").read_text())
 
 
-def aggregate(df):
+def aggregate(df: pd.DataFrame) -> pd.DataFrame:
     cross = pd.read_csv(ROOT / "sql/issue_crosswalk.csv")
     df = df.merge(
         cross,
@@ -28,7 +28,7 @@ def aggregate(df):
         return pd.read_sql_query((ROOT / "sql/within_product.sql").read_text(), con)
 
 
-def forecast(y):
+def forecast(y: np.ndarray) -> tuple[float, float]:
     """Conditional NB2 GLM with log link; Poisson fallback at zero overdispersion."""
     w = len(y)
     months = np.arange(w + 1) % 12
@@ -45,13 +45,13 @@ def forecast(y):
     return pred, a
 
 
-def tail(count, mu, a):
+def tail(count: int, mu: float, a: float) -> float:
     if a < 1e-8:
         return poisson.sf(count - 1, mu)
     return nbinom.sf(count - 1, 1 / a, 1 / (1 + a * mu))
 
 
-def replay(raw):
+def replay(raw: pd.DataFrame) -> pd.DataFrame:
     from cfpb_pipeline import find_emerging_issue_candidates
 
     total = raw.groupby("month")["count"].sum()

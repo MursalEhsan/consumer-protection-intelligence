@@ -6,7 +6,7 @@ from detector import ROOT, CFG
 from cfpb_pipeline import find_emerging_issue_candidates
 
 
-def legacy_source(raw):
+def legacy_source(raw: pd.DataFrame) -> pd.DataFrame:
     overall = (
         raw.groupby(["month", "Issue"])["count"]
         .sum()
@@ -18,7 +18,7 @@ def legacy_source(raw):
     return overall
 
 
-def main():
+def main() -> None:
     out = ROOT / "reports"
     df = pd.read_parquet(out / "detector_replay.parquet")
     raw = pd.read_parquet(out / "product_monthly.parquet")

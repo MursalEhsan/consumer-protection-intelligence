@@ -16,6 +16,7 @@ OUT = ROOT / "reports"
 def render(plot: bool = False) -> str:
     def get(name):
         return json.loads((OUT / name).read_text())
+
     table = pd.read_csv(OUT / "backtest_table.csv").set_index("method")
     old = table.loc["legacy"]
     glm = table.loc["glm"]

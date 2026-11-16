@@ -15,7 +15,7 @@ from fresh_data import TEXT
 CFG = yaml.safe_load((ROOT / "config/clusters.yaml").read_text())
 
 
-def run():
+def run() -> None:
     folder = ROOT / "output/clusters"
     d = pd.read_parquet(folder / "sample.parquet")
     vec = np.load(folder / "embedding.npy")

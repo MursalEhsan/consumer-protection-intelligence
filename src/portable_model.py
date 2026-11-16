@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 
 class PortableModel:
-    def __init__(self, path: Path):
+    def __init__(self, path: Path) -> None:
         with np.load(path, allow_pickle=False) as d:
             self.weights = d["weights"]
             self.idf = d["idf"]

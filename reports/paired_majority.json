@@ -1,0 +1,8 @@
+{
+  "class": "Incorrect information on your report",
+  "strongest_constant_by_test_accuracy": true,
+  "model_only_correct": 440,
+  "baseline_only_correct": 149,
+  "both_correct": 312,
+  "p_exact_two_sided": 2.6532838616206225e-34
+}

@@ -8,7 +8,7 @@ from cfpb_pipeline import find_emerging_issue_candidates
 from detector import ROOT
 
 
-def main():
+def main() -> None:
     out = ROOT / "reports"
     raw = pd.read_parquet(out / "product_monthly.parquet")
     flags = find_emerging_issue_candidates(legacy_source(raw), raw.month.max())

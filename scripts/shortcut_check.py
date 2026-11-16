@@ -12,11 +12,11 @@ from fresh_data import DuplicateFilter, ROOT, TEXT, load_split
 from fresh_eval import targets
 
 
-def form(s):
+def form(s: str) -> list[float]:
     return [np.log1p(len(s)), s.lower().count("xxxx"), s.count("\n")]
 
 
-def main(directory):
+def main(directory: Path) -> None:
     filt = DuplicateFilter()
     train = filt.apply(load_split(directory, "train"))
     val = filt.apply(load_split(directory, "validation"))

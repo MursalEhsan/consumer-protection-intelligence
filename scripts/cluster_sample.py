@@ -9,7 +9,7 @@ from fresh_eval import embedding
 from fresh_data import TEXT, ID, ROOT
 
 
-def prepare(directory):
+def prepare(directory: Path) -> None:
     archives = sorted(directory.glob("CCDB_Export_*.zip"))
     if {int(f.name.split("_")[2]) for f in archives} != set(range(2, 22)):
         raise ValueError("Archive exports 2 through 21 required")

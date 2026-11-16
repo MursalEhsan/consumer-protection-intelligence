@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 
-def main():
+def main() -> None:
     out = Path(__file__).resolve().parents[1] / "reports"
     path = out / "product_monthly.parquet"
     frame = pd.read_parquet(path)

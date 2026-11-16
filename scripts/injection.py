@@ -8,7 +8,7 @@ from cfpb_pipeline import screen_issue_month
 from detector import CFG, ROOT, aggregate, forecast, tail
 
 
-def main():
+def main() -> None:
     out = ROOT / "reports"
     raw = pd.read_parquet(out / "product_monthly.parquet")
     a = aggregate(raw)
