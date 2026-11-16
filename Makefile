@@ -5,6 +5,7 @@ setup:
 
 run:
 	python3 src/cfpb_pipeline.py
+	PYTHONPATH=src:scripts python3 scripts/refresh_product.py
 
 refresh-data:
 	python3 src/cfpb_pipeline.py --refresh-source --refresh-sample

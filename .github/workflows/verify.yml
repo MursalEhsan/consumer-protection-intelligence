@@ -11,6 +11,7 @@ jobs:
       - run: pip install -r requirements.lock pytest ruff
       - run: ruff check .
       - run: python -m pytest
+      - run: python scripts/readme_report.py --check
       - run: make demo
       - run: docker build -t cfpb-demo .
       - run: docker run --rm cfpb-demo make demo
