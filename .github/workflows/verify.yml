@@ -8,9 +8,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: pip install -r requirements.txt pytest ruff
+      - run: pip install -r requirements.lock pytest ruff
       - run: ruff check .
-      - run: pytest
+      - run: python -m pytest
       - run: make demo
       - run: docker build -t cfpb-demo .
       - run: docker run --rm cfpb-demo make demo

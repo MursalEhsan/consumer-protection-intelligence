@@ -37,3 +37,5 @@ Engineering and deployment evidence. Added a numeric-only GitHub model prereleas
 Remaining taxonomy risk. Coverage inventory regression detects added, missing or changed spans and internal gaps. The two analyst mappings do not establish equivalence for all splits or merges. Absent or discontinued options remain unresolved until a source confirms them. Product distributions, data vintages and uneven narrative opt-in remain sources of bias.
 
 Shortcut evidence. The validation ablations in reports/validation_shortcuts.json remove redaction tokens and repeated training lines; a separate form-only classifier uses length, mask count and line count. Some SVC predictions depend on redaction markers. This is sensitivity evidence, not proof that all shortcuts have been removed.
+
+CI triage. The first remote run rejected lint. The next reached pytest and failed because the pytest launcher did not add the checkout root to the import path. Switched CI to python -m pytest and the resolved runtime lock. The fixture and aggregate exceptions in .dockerignore keep the Docker smoke path usable.
