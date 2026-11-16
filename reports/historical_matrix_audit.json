@@ -1,0 +1,51 @@
+{
+  "rows": 18215,
+  "correct": 11465,
+  "accuracy": 0.6294262970079605,
+  "test_majority_oracle_accuracy": 0.5029920395278616,
+  "accuracy_difference": 0.12643425748009882,
+  "macro_f1": 0.39387500089846345,
+  "weighted_f1": 0.6236360883680158,
+  "named_accuracy": 0.45752789130674915,
+  "other_accuracy": 0.7992796332678455,
+  "precision_by_class": [
+    0.5785491766800178,
+    0.45852534562211983,
+    0.22695035460992907,
+    0.2716049382716049,
+    0.5696400625978091,
+    0.7684155299055614,
+    0.5,
+    0.1771019677996422,
+    0.6147672552166934,
+    0.3577981651376147,
+    0.37340619307832423
+  ],
+  "recall_by_class": [
+    0.5345394736842105,
+    0.23550295857988165,
+    0.47058823529411764,
+    0.5331179321486268,
+    0.5416666666666666,
+    0.7992796332678455,
+    0.038461538461538464,
+    0.3574007220216607,
+    0.6491525423728813,
+    0.16595744680851063,
+    0.24289099526066352
+  ],
+  "class_order": [
+    "Attempts to collect debt not owed",
+    "False statements or representation",
+    "Improper use of your report",
+    "Incorrect information on your report",
+    "Managing an account",
+    "Other / outside selected training taxonomy",
+    "Other transaction problem",
+    "Problem with a company's investigation into an existing problem",
+    "Problem with a purchase shown on your statement",
+    "Took or threatened to take negative or legal action",
+    "Written notification about debt"
+  ],
+  "scope": "Previously inspected historical sample; retrospective test-majority comparator"
+}

@@ -7,3 +7,5 @@ Changes and evidence. Copied the two handoffs outside the checkout, removed the 
 
 ## Historical classifier audit
 Current state and defects. Read the audit, model card and training code. The training-majority comparator measures a deployable constant policy; the retrospective test majority is an oracle diagnostic. The report does not trace both to executable confusion-matrix arithmetic. Prior inspection before filtering compromises the holdout. Bounded SimHash skips oversized buckets and short texts. Changing label frequencies and repeated templates can distort evaluation. Redaction tokens, boilerplate and length are potential shortcuts; their effect is unmeasured.
+
+Changes and evidence. src/audit_matrix.py reads the committed matrix and ordered labels, checks dimensions and recomputes per-class precision/recall, aggregate F1, and conditional accuracies. See reports/historical_matrix_audit.json. No refitting or new test observations. Deduplication and shortcut risks remain. A retrospective majority is not available to an operator choosing a constant prediction in advance.
