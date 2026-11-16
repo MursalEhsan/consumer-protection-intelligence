@@ -25,3 +25,10 @@ class ProductDetectorTests(unittest.TestCase):
         )
         self.assertFalse(scored.loc["2023-11", "glm"])
         self.assertTrue(scored.loc["2023-12", "glm"])
+
+    def test_taxonomy_coverage_regression(self):
+        from taxonomy_audit import inventory
+
+        current = inventory(pd.read_parquet(ROOT / "reports/product_monthly.parquet"))
+        reference = pd.read_csv(ROOT / "reports/taxonomy_coverage.csv", keep_default_na=False)
+        pd.testing.assert_frame_equal(current, reference)
