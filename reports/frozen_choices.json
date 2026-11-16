@@ -1,0 +1,45 @@
+{
+  "best": "tfidf_svc",
+  "baseline": "stratified",
+  "settings": {
+    "majority": {
+      "validation_macro_f1": 0.045947850599013386,
+      "temperature": 1.0,
+      "threshold": 1.01
+    },
+    "stratified": {
+      "validation_macro_f1": 0.08905605432975512,
+      "temperature": 1.0,
+      "threshold": 1.01
+    },
+    "tfidf_logistic": {
+      "validation_macro_f1": 0.2193285878493106,
+      "temperature": 0.7156973208890431,
+      "threshold": 0.8
+    },
+    "tfidf_svc": {
+      "validation_macro_f1": 0.4358274720258411,
+      "temperature": 0.3436771505654614,
+      "threshold": 0.8
+    },
+    "minilm_logistic": {
+      "validation_macro_f1": 0.40448328926971283,
+      "temperature": 0.8394085350374063,
+      "threshold": 0.8
+    }
+  },
+  "classes": [
+    "Attempts to collect debt not owed",
+    "Dealing with your lender or servicer",
+    "Getting a credit card",
+    "Improper use of your report",
+    "Incorrect information on your report",
+    "Managing an account",
+    "Other",
+    "Problem with a company's investigation into an existing problem",
+    "Problem with a purchase shown on your statement",
+    "Trouble during payment process",
+    "Written notification about debt"
+  ],
+  "model_sha256": "77f73e5672837f5789ce130a6edccb9ed2dedb4ed9b1015c3e262fe520cd20e7"
+}

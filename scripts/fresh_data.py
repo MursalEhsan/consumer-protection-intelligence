@@ -1,4 +1,5 @@
 """Prepare a deterministic, strictly date-bounded local archive sample."""
+
 import hashlib
 import re
 from pathlib import Path
@@ -15,7 +16,7 @@ ID = "Complaint ID"
 
 def load_split(directory: Path, split: str) -> pd.DataFrame:
     number = dict(zip(("train", "validation", "test"), CFG["archive_exports"]))[split]
-    source, = directory.glob(f"CCDB_Export_{number}_*.zip")
+    (source,) = directory.glob(f"CCDB_Export_{number}_*.zip")
     fields = [ID, TEXT, "Date received", "Product", "Issue"]
     start, end = map(str, CFG[split])
     kept = []
@@ -41,10 +42,13 @@ class DuplicateFilter:
             normalized = " ".join(tokens)
             if not tokens or row[ID] in self.ids or normalized in self.exact:
                 continue
-            shingles = {" ".join(tokens[j:j+3]) for j in range(len(tokens)-2)} or {normalized}
+            shingles = {" ".join(tokens[j : j + 3]) for j in range(len(tokens) - 2)} or {normalized}
             mh = MinHash(num_perm=CFG["minhash_permutations"], seed=CFG["seed"])
             mh.update_batch([s.encode() for s in shingles])
-            if any(len(shingles & self.words[k])/len(shingles | self.words[k]) >= CFG["duplicate_jaccard"] for k in self.index.query(mh)):
+            if any(
+                len(shingles & self.words[k]) / len(shingles | self.words[k]) >= CFG["duplicate_jaccard"]
+                for k in self.index.query(mh)
+            ):
                 continue
             self.ids.add(row[ID])
             self.exact.add(normalized)
