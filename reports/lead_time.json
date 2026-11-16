@@ -1,0 +1,14 @@
+{
+  "events": 15,
+  "cluster_matches": 4,
+  "glm_matches": 1,
+  "earlier": 4,
+  "later": 1,
+  "both_missed": 10,
+  "restricted_mean_months": 0.6,
+  "bootstrap_95": [
+    -0.2512499999999999,
+    1.2173913043478262
+  ],
+  "unique_event_months": 6
+}

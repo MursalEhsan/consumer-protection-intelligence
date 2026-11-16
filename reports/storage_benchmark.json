@@ -1,0 +1,9 @@
+{
+  "median_seconds": {
+    "sqlite_memory": 0.01125033300013456,
+    "duckdb_parquet": 0.004304624999349471
+  },
+  "repetitions": 7,
+  "rows": 1689,
+  "note": "Warm group-by latency, excludes ingestion and setup. Retain SQLite for legacy warehouse; the viewer reads Parquet directly and needs no DB migration."
+}

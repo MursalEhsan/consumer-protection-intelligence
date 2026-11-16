@@ -1,0 +1,546 @@
+month,product,cluster,sample_count,modal_issue,keywords,new,growth
+2025-01,Checking or savings account,1,5,Managing an account,account report customer fraud,True,False
+2025-01,Checking or savings account,2,13,Problem caused by your funds being low,funds investigation account company,True,False
+2025-02,Checking or savings account,1,5,Managing an account,account customer funds fraud,False,False
+2025-02,Checking or savings account,2,1,Problem with a lender or other company charging your account,funds account investigation loan,False,False
+2025-03,Checking or savings account,1,6,Managing an account,account funds fraud customer,False,False
+2026-04,Checking or savings account,4,2,Managing an account,investigation information report fraud,True,False
+2023-11,Credit card,2,1,Incorrect information on your report,account problem investigation getting,True,False
+2023-12,Credit card,1,4,"Advertising and marketing, including promotional offers",information account report service,False,False
+2024-04,Credit card,3,3,Problem with a company's investigation into an existing problem,account company,True,False
+2024-04,Credit card,4,11,Problem with a purchase shown on your statement,account information funds fraud,True,False
+2024-05,Credit card,3,1,Problem with a company's investigation into an existing problem,company account,False,False
+2024-05,Credit card,4,5,"Advertising and marketing, including promotional offers",account information fraud funds,False,False
+2023-09,Credit reporting or other personal consumer reports,1,8,Improper use of your report,account information report incorrect,True,False
+2023-09,Credit reporting or other personal consumer reports,2,27,Incorrect information on your report,report information fraud investigation,True,False
+2023-10,Credit reporting or other personal consumer reports,3,3,Incorrect information on your report,fraud opening loan report,True,False
+2023-10,Credit reporting or other personal consumer reports,4,3,Incorrect information on your report,fraud company information report,True,False
+2023-10,Credit reporting or other personal consumer reports,5,8,Problem with a company's investigation into an existing problem,report incorrect information investigation,True,False
+2023-10,Credit reporting or other personal consumer reports,2,2,Improper use of your report,account report investigation statement,False,False
+2023-10,Credit reporting or other personal consumer reports,6,3,Incorrect information on your report,report fraud information investigation,True,False
+2023-10,Credit reporting or other personal consumer reports,1,9,Improper use of your report,account information report incorrect,False,False
+2023-10,Credit reporting or other personal consumer reports,7,3,Incorrect information on your report,report incorrect statement shown,True,False
+2023-11,Credit reporting or other personal consumer reports,4,2,Incorrect information on your report,fraud information statement report,False,False
+2023-11,Credit reporting or other personal consumer reports,5,7,Problem with a company's investigation into an existing problem,report information incorrect investigation,False,False
+2023-11,Credit reporting or other personal consumer reports,2,2,Credit monitoring or identity theft protection services,loan investigation company account,False,False
+2023-11,Credit reporting or other personal consumer reports,1,4,Improper use of your report,account information report incorrect,False,False
+2023-11,Credit reporting or other personal consumer reports,7,1,Problem with a company's investigation into an existing problem,fraud problem report getting,False,False
+2023-11,Credit reporting or other personal consumer reports,6,10,Improper use of your report,information report fraud statement,False,False
+2023-12,Credit reporting or other personal consumer reports,5,10,Problem with a company's investigation into an existing problem,investigation report incorrect information,False,False
+2023-12,Credit reporting or other personal consumer reports,4,2,Incorrect information on your report,fraud information statement report,False,False
+2023-12,Credit reporting or other personal consumer reports,1,11,Improper use of your report,account information report customer,False,False
+2023-12,Credit reporting or other personal consumer reports,6,6,Incorrect information on your report,company report information,False,False
+2023-12,Credit reporting or other personal consumer reports,7,8,Incorrect information on your report,report information fraud statement,False,False
+2023-12,Credit reporting or other personal consumer reports,8,7,Incorrect information on your report,account report getting fraud,True,False
+2024-01,Credit reporting or other personal consumer reports,4,5,Incorrect information on your report,fraud report information customer,False,False
+2024-01,Credit reporting or other personal consumer reports,6,7,Incorrect information on your report,report company information,False,False
+2024-01,Credit reporting or other personal consumer reports,1,10,Improper use of your report,information account report customer,False,False
+2024-01,Credit reporting or other personal consumer reports,5,2,Improper use of your report,incorrect information report investigation,False,False
+2024-01,Credit reporting or other personal consumer reports,7,2,Incorrect information on your report,report information company account,False,False
+2024-01,Credit reporting or other personal consumer reports,9,3,Incorrect information on your report,fraud report information account,True,False
+2024-01,Credit reporting or other personal consumer reports,8,15,Incorrect information on your report,company account report information,False,False
+2024-02,Credit reporting or other personal consumer reports,6,2,Improper use of your report,report company information,False,False
+2024-02,Credit reporting or other personal consumer reports,8,1,Improper use of your report,report company,False,False
+2024-02,Credit reporting or other personal consumer reports,1,43,Improper use of your report,account information report company,False,False
+2024-02,Credit reporting or other personal consumer reports,4,2,Incorrect information on your report,report fraud information customer,False,False
+2024-02,Credit reporting or other personal consumer reports,9,1,Improper use of your report,account statement fraud information,False,False
+2024-03,Credit reporting or other personal consumer reports,6,8,Incorrect information on your report,report lender company investigation,False,False
+2024-03,Credit reporting or other personal consumer reports,10,2,Improper use of your report,account information incorrect report,True,False
+2024-03,Credit reporting or other personal consumer reports,11,6,Incorrect information on your report,account report investigation information,True,False
+2024-03,Credit reporting or other personal consumer reports,12,4,Improper use of your report,information account report investigation,True,False
+2024-03,Credit reporting or other personal consumer reports,4,3,Incorrect information on your report,report customer information loan,False,False
+2024-03,Credit reporting or other personal consumer reports,13,4,Problem with a company's investigation into an existing problem,caused purchase report problem,True,False
+2024-03,Credit reporting or other personal consumer reports,15,3,Problem with a company's investigation into an existing problem,incorrect report information account,True,False
+2024-03,Credit reporting or other personal consumer reports,9,12,Incorrect information on your report,account report confusing problem,False,False
+2024-03,Credit reporting or other personal consumer reports,16,4,Incorrect information on your report,fraud missing getting loan,True,False
+2024-03,Credit reporting or other personal consumer reports,1,6,Improper use of your report,company account information incorrect,False,False
+2024-04,Credit reporting or other personal consumer reports,12,10,Improper use of your report,information account report customer,False,False
+2024-04,Credit reporting or other personal consumer reports,11,10,Incorrect information on your report,report account information statement,False,False
+2024-04,Credit reporting or other personal consumer reports,6,7,Improper use of your report,report lender investigation company,False,False
+2024-04,Credit reporting or other personal consumer reports,17,6,Improper use of your report,fraud information account statement,True,False
+2024-04,Credit reporting or other personal consumer reports,4,3,Incorrect information on your report,investigation lease report fraud,False,False
+2024-04,Credit reporting or other personal consumer reports,16,2,Incorrect information on your report,fraud getting report missing,False,False
+2024-04,Credit reporting or other personal consumer reports,13,1,Improper use of your report,getting incorrect report investigation,False,False
+2024-04,Credit reporting or other personal consumer reports,9,3,Problem with a company's investigation into an existing problem,caused account report confusing,False,False
+2024-04,Credit reporting or other personal consumer reports,1,8,Incorrect information on your report,company account information incorrect,False,False
+2024-04,Credit reporting or other personal consumer reports,15,4,Problem with a company's investigation into an existing problem,account shown report information,False,False
+2024-05,Credit reporting or other personal consumer reports,11,7,Incorrect information on your report,statement account report loan,False,False
+2024-05,Credit reporting or other personal consumer reports,16,1,Incorrect information on your report,fraud report incorrect,False,False
+2024-05,Credit reporting or other personal consumer reports,6,15,Improper use of your report,report disclosures service lease,False,False
+2024-05,Credit reporting or other personal consumer reports,4,19,Incorrect information on your report,fraud report information account,False,False
+2024-05,Credit reporting or other personal consumer reports,15,3,Problem with a company's investigation into an existing problem,information account report,False,False
+2024-05,Credit reporting or other personal consumer reports,18,2,Incorrect information on your report,account shown incorrect report,True,False
+2024-05,Credit reporting or other personal consumer reports,13,2,Improper use of your report,report,False,False
+2024-05,Credit reporting or other personal consumer reports,1,10,Problem with a company's investigation into an existing problem,account report information company,False,False
+2024-05,Credit reporting or other personal consumer reports,12,5,Improper use of your report,information account report customer,False,False
+2024-05,Credit reporting or other personal consumer reports,19,7,Improper use of your report,information account disclosures company,True,False
+2024-06,Credit reporting or other personal consumer reports,11,11,Problem with a company's investigation into an existing problem,statement account report opening,False,False
+2024-06,Credit reporting or other personal consumer reports,19,14,Improper use of your report,information account report loan,False,False
+2024-06,Credit reporting or other personal consumer reports,15,6,Problem with a company's investigation into an existing problem,information incorrect account report,False,False
+2024-06,Credit reporting or other personal consumer reports,20,3,Incorrect information on your report,incorrect report shown lender,True,False
+2024-06,Credit reporting or other personal consumer reports,6,2,Improper use of your report,disclosures report service purchase,False,False
+2024-06,Credit reporting or other personal consumer reports,13,10,Incorrect information on your report,account investigation report incorrect,False,False
+2024-06,Credit reporting or other personal consumer reports,4,16,Incorrect information on your report,report information problem getting,False,False
+2024-06,Credit reporting or other personal consumer reports,1,9,Incorrect information on your report,information report caused account,False,False
+2024-07,Credit reporting or other personal consumer reports,11,11,Incorrect information on your report,statement account company caused,False,False
+2024-07,Credit reporting or other personal consumer reports,1,70,Improper use of your report,report information account incorrect,False,False
+2024-08,Credit reporting or other personal consumer reports,11,11,Incorrect information on your report,statement company disclosures caused,False,False
+2024-08,Credit reporting or other personal consumer reports,21,2,Problem with a company's investigation into an existing problem,investigation incorrect caused lender,True,False
+2024-08,Credit reporting or other personal consumer reports,22,3,Problem with a company's investigation into an existing problem,incorrect account report information,True,False
+2024-08,Credit reporting or other personal consumer reports,23,5,Incorrect information on your report,getting incorrect missing report,True,False
+2024-08,Credit reporting or other personal consumer reports,24,14,Improper use of your report,information account report company,True,False
+2024-08,Credit reporting or other personal consumer reports,25,7,Incorrect information on your report,report getting opening lender,True,False
+2024-08,Credit reporting or other personal consumer reports,26,3,Improper use of your report,investigation incorrect caused report,True,False
+2024-08,Credit reporting or other personal consumer reports,27,14,Incorrect information on your report,account information company report,True,False
+2024-08,Credit reporting or other personal consumer reports,28,3,Incorrect information on your report,report fraud information statement,True,False
+2024-08,Credit reporting or other personal consumer reports,1,4,Improper use of your report,information report shown account,False,False
+2024-08,Credit reporting or other personal consumer reports,29,8,Improper use of your report,report loan lender service,True,False
+2024-08,Credit reporting or other personal consumer reports,30,5,Incorrect information on your report,fraud problem caused report,True,False
+2024-09,Credit reporting or other personal consumer reports,11,8,Improper use of your report,statement company disclosures caused,False,False
+2024-09,Credit reporting or other personal consumer reports,31,2,Incorrect information on your report,problem report information account,True,False
+2024-09,Credit reporting or other personal consumer reports,30,4,Incorrect information on your report,fraud report information problem,False,False
+2024-09,Credit reporting or other personal consumer reports,1,3,Incorrect information on your report,account information getting report,False,False
+2024-09,Credit reporting or other personal consumer reports,29,4,Improper use of your report,report investigation fraud information,False,False
+2024-09,Credit reporting or other personal consumer reports,25,8,Incorrect information on your report,report opening company fraud,False,False
+2024-09,Credit reporting or other personal consumer reports,22,1,Problem with a company's investigation into an existing problem,incorrect report account investigation,False,False
+2024-09,Credit reporting or other personal consumer reports,21,3,Incorrect information on your report,incorrect investigation getting report,False,False
+2024-09,Credit reporting or other personal consumer reports,23,4,Incorrect information on your report,low company getting information,False,False
+2024-09,Credit reporting or other personal consumer reports,27,5,Problem with a company's investigation into an existing problem,account investigation information report,False,False
+2024-09,Credit reporting or other personal consumer reports,24,6,Improper use of your report,information account report company,False,False
+2024-09,Credit reporting or other personal consumer reports,26,2,Improper use of your report,information investigation report company,False,False
+2024-09,Credit reporting or other personal consumer reports,28,7,Incorrect information on your report,report fraud information loan,False,False
+2024-09,Credit reporting or other personal consumer reports,32,3,Credit monitoring or identity theft protection services,lender getting problem report,True,False
+2024-10,Credit reporting or other personal consumer reports,11,13,Incorrect information on your report,statement company caused disclosures,False,False
+2024-10,Credit reporting or other personal consumer reports,21,3,Incorrect information on your report,getting incorrect report account,False,False
+2024-10,Credit reporting or other personal consumer reports,26,7,Incorrect information on your report,disclosures information lease loan,False,False
+2024-10,Credit reporting or other personal consumer reports,24,7,Improper use of your report,account information report company,False,False
+2024-10,Credit reporting or other personal consumer reports,25,11,Incorrect information on your report,report opening loan company,False,False
+2024-10,Credit reporting or other personal consumer reports,29,5,Improper use of your report,report investigation fraud caused,False,False
+2024-10,Credit reporting or other personal consumer reports,1,5,Credit monitoring or identity theft protection services,information fraud report account,False,False
+2024-10,Credit reporting or other personal consumer reports,32,1,Unable to get your credit report or credit score,lender purchase report caused,False,False
+2024-10,Credit reporting or other personal consumer reports,33,2,Improper use of your report,customer fraud account purchase,True,False
+2024-10,Credit reporting or other personal consumer reports,27,13,Incorrect information on your report,investigation account report information,False,False
+2024-10,Credit reporting or other personal consumer reports,28,3,Incorrect information on your report,report account fraud information,False,False
+2024-11,Credit reporting or other personal consumer reports,27,80,Incorrect information on your report,information report account investigation,False,False
+2024-11,Credit reporting or other personal consumer reports,34,4,Incorrect information on your report,account report missing company,True,False
+2024-11,Credit reporting or other personal consumer reports,11,6,Incorrect information on your report,statement caused company disclosures,False,False
+2024-12,Credit reporting or other personal consumer reports,35,10,Improper use of your report,information statement report disclosures,True,False
+2024-12,Credit reporting or other personal consumer reports,34,5,Incorrect information on your report,statement account caused disclosures,False,False
+2024-12,Credit reporting or other personal consumer reports,36,6,Incorrect information on your report,information account investigation report,True,False
+2024-12,Credit reporting or other personal consumer reports,27,71,Incorrect information on your report,report account information investigation,False,False
+2025-01,Credit reporting or other personal consumer reports,36,4,Incorrect information on your report,information,False,False
+2025-01,Credit reporting or other personal consumer reports,35,8,Improper use of your report,information statement report account,False,False
+2025-01,Credit reporting or other personal consumer reports,34,4,Incorrect information on your report,statement disclosures caused company,False,False
+2025-01,Credit reporting or other personal consumer reports,37,10,Incorrect information on your report,fraud loan account report,True,False
+2025-01,Credit reporting or other personal consumer reports,38,5,Improper use of your report,report problem information company,True,False
+2025-01,Credit reporting or other personal consumer reports,40,3,Improper use of your report,company report incorrect investigation,True,False
+2025-01,Credit reporting or other personal consumer reports,41,8,Problem with a company's investigation into an existing problem,investigation account company report,True,False
+2025-01,Credit reporting or other personal consumer reports,42,15,Incorrect information on your report,fraud loan caused information,True,False
+2025-01,Credit reporting or other personal consumer reports,43,3,Incorrect information on your report,incorrect information report,True,False
+2025-01,Credit reporting or other personal consumer reports,44,1,Incorrect information on your report,getting incorrect report lender,True,False
+2025-01,Credit reporting or other personal consumer reports,45,6,Incorrect information on your report,missing caused disclosures customer,True,False
+2025-01,Credit reporting or other personal consumer reports,46,4,Improper use of your report,confusing information incorrect account,True,False
+2025-01,Credit reporting or other personal consumer reports,47,16,Incorrect information on your report,account incorrect report shown,True,False
+2025-01,Credit reporting or other personal consumer reports,48,5,Incorrect information on your report,company service loan fraud,True,False
+2025-01,Credit reporting or other personal consumer reports,49,5,Problem with a company's investigation into an existing problem,investigation disclosures information account,True,False
+2025-01,Credit reporting or other personal consumer reports,50,9,Problem with a company's investigation into an existing problem,lender investigation account report,True,False
+2025-01,Credit reporting or other personal consumer reports,51,7,Incorrect information on your report,incorrect caused report account,True,False
+2025-01,Credit reporting or other personal consumer reports,52,7,Improper use of your report,account report investigation information,True,False
+2025-01,Credit reporting or other personal consumer reports,27,8,Incorrect information on your report,incorrect investigation information report,False,False
+2025-02,Credit reporting or other personal consumer reports,36,1,Incorrect information on your report,information,False,False
+2025-02,Credit reporting or other personal consumer reports,53,7,Incorrect information on your report,,True,False
+2025-02,Credit reporting or other personal consumer reports,44,3,Incorrect information on your report,getting fraud report information,False,False
+2025-02,Credit reporting or other personal consumer reports,35,8,Improper use of your report,information report account loan,False,False
+2025-02,Credit reporting or other personal consumer reports,43,7,Incorrect information on your report,incorrect information report account,False,False
+2025-02,Credit reporting or other personal consumer reports,54,6,Incorrect information on your report,account company report investigation,True,False
+2025-02,Credit reporting or other personal consumer reports,41,4,Problem with a company's investigation into an existing problem,investigation account problem report,False,False
+2025-02,Credit reporting or other personal consumer reports,40,5,Improper use of your report,customer report statement incorrect,False,False
+2025-02,Credit reporting or other personal consumer reports,46,2,Improper use of your report,company customer service information,False,False
+2025-02,Credit reporting or other personal consumer reports,37,4,Incorrect information on your report,fraud loan account report,False,False
+2025-02,Credit reporting or other personal consumer reports,39,4,Incorrect information on your report,account lease statement report,False,False
+2025-02,Credit reporting or other personal consumer reports,38,5,Incorrect information on your report,information report problem company,False,False
+2025-02,Credit reporting or other personal consumer reports,47,4,Incorrect information on your report,account report caused incorrect,False,False
+2025-02,Credit reporting or other personal consumer reports,42,6,Incorrect information on your report,fraud loan caused information,False,False
+2025-02,Credit reporting or other personal consumer reports,50,2,Incorrect information on your report,investigation information company report,False,False
+2025-02,Credit reporting or other personal consumer reports,49,7,Problem with a company's investigation into an existing problem,low report loan disclosures,False,False
+2025-02,Credit reporting or other personal consumer reports,55,4,Incorrect information on your report,incorrect report information account,True,False
+2025-02,Credit reporting or other personal consumer reports,56,2,Improper use of your report,account report,True,False
+2025-02,Credit reporting or other personal consumer reports,52,5,Incorrect information on your report,account investigation report caused,False,False
+2025-02,Credit reporting or other personal consumer reports,27,7,Incorrect information on your report,company statement report account,False,False
+2025-02,Credit reporting or other personal consumer reports,51,2,Improper use of your report,servicer caused incorrect information,False,False
+2025-02,Credit reporting or other personal consumer reports,45,5,Improper use of your report,caused missing incorrect disclosures,False,False
+2025-03,Credit reporting or other personal consumer reports,36,2,Incorrect information on your report,information,False,False
+2025-03,Credit reporting or other personal consumer reports,53,4,Incorrect information on your report,account,False,False
+2025-03,Credit reporting or other personal consumer reports,35,10,Improper use of your report,account getting information report,False,False
+2025-03,Credit reporting or other personal consumer reports,58,4,Improper use of your report,loan servicer information caused,True,False
+2025-03,Credit reporting or other personal consumer reports,43,7,Incorrect information on your report,incorrect information report account,False,False
+2025-03,Credit reporting or other personal consumer reports,40,5,Improper use of your report,company purchase report lender,False,False
+2025-03,Credit reporting or other personal consumer reports,41,4,Problem with a company's investigation into an existing problem,investigation account report problem,False,False
+2025-03,Credit reporting or other personal consumer reports,49,4,Problem with a company's investigation into an existing problem,report investigation information customer,False,False
+2025-03,Credit reporting or other personal consumer reports,56,3,Improper use of your report,shown lender incorrect account,False,False
+2025-03,Credit reporting or other personal consumer reports,55,7,Incorrect information on your report,existing getting company incorrect,False,False
+2025-03,Credit reporting or other personal consumer reports,54,3,Incorrect information on your report,fraud caused loan report,False,False
+2025-03,Credit reporting or other personal consumer reports,45,4,Incorrect information on your report,statement disclosures company caused,False,False
+2025-03,Credit reporting or other personal consumer reports,47,4,Improper use of your report,report statement information incorrect,False,False
+2025-03,Credit reporting or other personal consumer reports,38,3,Incorrect information on your report,report information problem investigation,False,False
+2025-03,Credit reporting or other personal consumer reports,37,2,Incorrect information on your report,fraud loan account report,False,False
+2025-03,Credit reporting or other personal consumer reports,59,1,Improper use of your report,account company report investigation,True,False
+2025-03,Credit reporting or other personal consumer reports,51,5,Incorrect information on your report,investigation incorrect statement report,False,False
+2025-03,Credit reporting or other personal consumer reports,42,4,Incorrect information on your report,fraud information account report,False,False
+2025-03,Credit reporting or other personal consumer reports,39,2,Incorrect information on your report,information report account caused,False,False
+2025-03,Credit reporting or other personal consumer reports,27,4,Incorrect information on your report,report statement information caused,False,False
+2025-03,Credit reporting or other personal consumer reports,50,7,Incorrect information on your report,dealing caused report information,False,False
+2025-03,Credit reporting or other personal consumer reports,48,2,Incorrect information on your report,company service dealing fraud,False,False
+2025-03,Credit reporting or other personal consumer reports,52,1,Problem with a company's investigation into an existing issue,account caused investigation information,False,False
+2025-04,Credit reporting or other personal consumer reports,53,3,Incorrect information on your report,account,False,False
+2025-04,Credit reporting or other personal consumer reports,43,4,Incorrect information on your report,incorrect information report investigation,False,False
+2025-04,Credit reporting or other personal consumer reports,60,3,Incorrect information on your report,company account information report,True,False
+2025-04,Credit reporting or other personal consumer reports,40,9,Improper use of your report,report investigation lender information,False,False
+2025-04,Credit reporting or other personal consumer reports,58,1,Improper use of your report,loan servicer information fraud,False,False
+2025-04,Credit reporting or other personal consumer reports,61,6,Incorrect information on your report,getting incorrect problem information,True,False
+2025-04,Credit reporting or other personal consumer reports,35,1,Problem with a company's investigation into an existing problem,account information customer report,False,False
+2025-04,Credit reporting or other personal consumer reports,27,3,Incorrect information on your report,company disclosures report information,False,False
+2025-04,Credit reporting or other personal consumer reports,55,10,Improper use of your report,company account report existing,False,False
+2025-04,Credit reporting or other personal consumer reports,47,2,Incorrect information on your report,report incorrect information account,False,False
+2025-04,Credit reporting or other personal consumer reports,48,5,Incorrect information on your report,purchase loan account company,False,False
+2025-04,Credit reporting or other personal consumer reports,56,7,Improper use of your report,service company customer purchase,False,False
+2025-04,Credit reporting or other personal consumer reports,52,5,Incorrect information on your report,account caused report investigation,False,False
+2025-04,Credit reporting or other personal consumer reports,59,2,Improper use of your report,report company information account,False,False
+2025-04,Credit reporting or other personal consumer reports,41,2,Improper use of your report,investigation account opening company,False,False
+2025-04,Credit reporting or other personal consumer reports,42,4,Incorrect information on your report,statement shown opening fraud,False,False
+2025-04,Credit reporting or other personal consumer reports,50,2,Incorrect information on your report,caused incorrect information report,False,False
+2025-04,Credit reporting or other personal consumer reports,39,4,Incorrect information on your report,lease account statement report,False,False
+2025-04,Credit reporting or other personal consumer reports,36,2,Incorrect information on your report,investigation information company shown,False,False
+2025-04,Credit reporting or other personal consumer reports,45,7,Incorrect information on your report,disclosures statement incorrect investigation,False,False
+2025-04,Credit reporting or other personal consumer reports,37,10,Incorrect information on your report,fraud loan account report,False,False
+2025-04,Credit reporting or other personal consumer reports,54,3,Incorrect information on your report,opening fraud information statement,False,False
+2025-04,Credit reporting or other personal consumer reports,38,4,Incorrect information on your report,report investigation information statement,False,False
+2025-05,Credit reporting or other personal consumer reports,53,1,Incorrect information on your report,account,False,False
+2025-05,Credit reporting or other personal consumer reports,60,2,Improper use of your report,account information report,False,False
+2025-05,Credit reporting or other personal consumer reports,40,3,Improper use of your report,report investigation company lender,False,False
+2025-05,Credit reporting or other personal consumer reports,58,2,Improper use of your report,loan caused getting servicer,False,False
+2025-05,Credit reporting or other personal consumer reports,35,3,Improper use of your report,account information customer report,False,False
+2025-05,Credit reporting or other personal consumer reports,39,9,Improper use of your report,report account funds shown,False,False
+2025-05,Credit reporting or other personal consumer reports,45,2,Incorrect information on your report,statement disclosures caused company,False,False
+2025-05,Credit reporting or other personal consumer reports,36,8,Incorrect information on your report,investigation incorrect report loan,False,False
+2025-05,Credit reporting or other personal consumer reports,56,2,Incorrect information on your report,service company investigation report,False,False
+2025-05,Credit reporting or other personal consumer reports,48,1,Incorrect information on your report,purchase loan account company,False,False
+2025-05,Credit reporting or other personal consumer reports,47,3,Incorrect information on your report,report incorrect account information,False,False
+2025-05,Credit reporting or other personal consumer reports,59,3,Incorrect information on your report,report information account,False,False
+2025-05,Credit reporting or other personal consumer reports,42,4,Improper use of your report,statement information report investigation,False,False
+2025-05,Credit reporting or other personal consumer reports,54,3,Improper use of your report,information company account,False,False
+2025-05,Credit reporting or other personal consumer reports,38,2,Incorrect information on your report,information fraud report problem,False,False
+2025-05,Credit reporting or other personal consumer reports,37,5,Incorrect information on your report,fraud account loan report,False,False
+2025-05,Credit reporting or other personal consumer reports,52,14,Problem with a company's investigation into an existing problem,report information investigation account,False,False
+2025-05,Credit reporting or other personal consumer reports,61,3,Incorrect information on your report,getting account incorrect information,False,False
+2025-05,Credit reporting or other personal consumer reports,55,5,Incorrect information on your report,incorrect report information account,False,False
+2025-06,Credit reporting or other personal consumer reports,39,8,Improper use of your report,account report problem shown,False,False
+2025-06,Credit reporting or other personal consumer reports,40,10,Improper use of your report,company report information investigation,False,False
+2025-06,Credit reporting or other personal consumer reports,48,5,Improper use of your report,purchase company account report,False,False
+2025-06,Credit reporting or other personal consumer reports,61,2,Improper use of your report,getting incorrect information account,False,False
+2025-06,Credit reporting or other personal consumer reports,45,3,Incorrect information on your report,statement customer disclosures incorrect,False,False
+2025-06,Credit reporting or other personal consumer reports,36,4,Problem with a company's investigation into an existing problem,incorrect account investigation report,False,False
+2025-06,Credit reporting or other personal consumer reports,59,1,Improper use of your report,report information account,False,False
+2025-06,Credit reporting or other personal consumer reports,58,4,Incorrect information on your report,loan service caused statement,False,False
+2025-06,Credit reporting or other personal consumer reports,42,2,Incorrect information on your report,company report information investigation,False,False
+2025-06,Credit reporting or other personal consumer reports,35,4,Improper use of your report,information report account,False,False
+2025-06,Credit reporting or other personal consumer reports,62,8,Improper use of your report,fraud incorrect account report,True,False
+2025-06,Credit reporting or other personal consumer reports,47,6,Incorrect information on your report,account opening report incorrect,False,False
+2025-06,Credit reporting or other personal consumer reports,38,4,Improper use of your report,information report investigation fraud,False,False
+2025-06,Credit reporting or other personal consumer reports,37,4,Incorrect information on your report,fraud loan account report,False,False
+2025-06,Credit reporting or other personal consumer reports,55,18,Incorrect information on your report,incorrect information report investigation,False,False
+2025-06,Credit reporting or other personal consumer reports,63,3,Incorrect information on your report,loan account statement report,True,False
+2025-06,Credit reporting or other personal consumer reports,52,20,Incorrect information on your report,account report information investigation,False,False
+2025-07,Credit reporting or other personal consumer reports,64,5,Incorrect information on your report,information,True,False
+2025-07,Credit reporting or other personal consumer reports,39,2,Improper use of your report,account report problem shown,False,False
+2025-07,Credit reporting or other personal consumer reports,62,4,Incorrect information on your report,fraud account report information,False,False
+2025-07,Credit reporting or other personal consumer reports,35,6,Improper use of your report,information company report disclosures,False,False
+2025-07,Credit reporting or other personal consumer reports,45,2,Incorrect information on your report,statement disclosures caused company,False,False
+2025-07,Credit reporting or other personal consumer reports,65,7,Incorrect information on your report,investigation account report information,True,False
+2025-07,Credit reporting or other personal consumer reports,66,8,Incorrect information on your report,funds information statement account,True,False
+2025-07,Credit reporting or other personal consumer reports,40,13,Incorrect information on your report,company lender report lease,False,False
+2025-07,Credit reporting or other personal consumer reports,55,5,Incorrect information on your report,incorrect information report investigation,False,False
+2025-07,Credit reporting or other personal consumer reports,67,5,Improper use of your report,investigation company information incorrect,True,False
+2025-07,Credit reporting or other personal consumer reports,68,2,Incorrect information on your report,dealing caused information investigation,True,False
+2025-07,Credit reporting or other personal consumer reports,69,5,Problem with a company's investigation into an existing problem,getting caused incorrect report,True,False
+2025-07,Credit reporting or other personal consumer reports,48,1,Improper use of your report,service statement account loan,False,False
+2025-07,Credit reporting or other personal consumer reports,59,5,Problem with a company's investigation into an existing problem,service company investigation report,False,False
+2025-07,Credit reporting or other personal consumer reports,47,11,Incorrect information on your report,report fraud opening information,False,False
+2025-07,Credit reporting or other personal consumer reports,70,1,Incorrect information on your report,loan getting caused report,True,False
+2025-07,Credit reporting or other personal consumer reports,58,2,Incorrect information on your report,caused information account report,False,False
+2025-07,Credit reporting or other personal consumer reports,52,5,Incorrect information on your report,account caused report service,False,False
+2025-07,Credit reporting or other personal consumer reports,71,3,Improper use of your report,loan fraud service incorrect,True,False
+2025-07,Credit reporting or other personal consumer reports,37,6,Incorrect information on your report,fraud account report loan,False,False
+2025-07,Credit reporting or other personal consumer reports,38,7,Incorrect information on your report,report opening investigation information,False,False
+2025-07,Credit reporting or other personal consumer reports,63,4,Problem with a company's investigation into an existing problem,lease caused incorrect investigation,False,False
+2025-07,Credit reporting or other personal consumer reports,61,5,Improper use of your report,account information investigation company,False,False
+2025-08,Credit reporting or other personal consumer reports,64,5,Incorrect information on your report,information account,False,False
+2025-08,Credit reporting or other personal consumer reports,62,1,Incorrect information on your report,fraud account report information,False,False
+2025-08,Credit reporting or other personal consumer reports,65,7,Incorrect information on your report,investigation statement company account,False,False
+2025-08,Credit reporting or other personal consumer reports,67,2,Improper use of your report,investigation company information report,False,False
+2025-08,Credit reporting or other personal consumer reports,35,7,Improper use of your report,information report disclosures account,False,False
+2025-08,Credit reporting or other personal consumer reports,40,13,Improper use of your report,report existing loan fraud,False,False
+2025-08,Credit reporting or other personal consumer reports,39,2,Problem with a company's investigation into an existing problem,getting account report information,False,False
+2025-08,Credit reporting or other personal consumer reports,66,4,Incorrect information on your report,report account information statement,False,False
+2025-08,Credit reporting or other personal consumer reports,38,2,Improper use of your report,fraud report information account,False,False
+2025-08,Credit reporting or other personal consumer reports,37,8,Incorrect information on your report,fraud account report information,False,False
+2025-08,Credit reporting or other personal consumer reports,58,10,Incorrect information on your report,report information account caused,False,False
+2025-08,Credit reporting or other personal consumer reports,68,3,Improper use of your report,servicer incorrect loan investigation,False,False
+2025-08,Credit reporting or other personal consumer reports,47,11,Incorrect information on your report,report fraud information lease,False,False
+2025-08,Credit reporting or other personal consumer reports,71,6,Improper use of your report,incorrect investigation caused account,False,False
+2025-08,Credit reporting or other personal consumer reports,48,2,Improper use of your report,service loan company account,False,False
+2025-08,Credit reporting or other personal consumer reports,69,3,Incorrect information on your report,incorrect getting loan report,False,False
+2025-08,Credit reporting or other personal consumer reports,63,6,Problem with a company's investigation into an existing problem,incorrect lease caused dealing,False,False
+2025-08,Credit reporting or other personal consumer reports,52,1,Incorrect information on your report,lender account loan servicer,False,False
+2025-08,Credit reporting or other personal consumer reports,61,6,Incorrect information on your report,account shown investigation information,False,False
+2025-09,Credit reporting or other personal consumer reports,64,3,Incorrect information on your report,information account company,False,False
+2025-09,Credit reporting or other personal consumer reports,35,6,Incorrect information on your report,information account company incorrect,False,False
+2025-09,Credit reporting or other personal consumer reports,66,2,Incorrect information on your report,account report information loan,False,False
+2025-09,Credit reporting or other personal consumer reports,40,4,Improper use of your report,report lender existing getting,False,False
+2025-09,Credit reporting or other personal consumer reports,69,2,Incorrect information on your report,getting caused report incorrect,False,False
+2025-09,Credit reporting or other personal consumer reports,37,4,Improper use of your report,investigation fraud report information,False,False
+2025-09,Credit reporting or other personal consumer reports,62,6,Incorrect information on your report,fraud account report information,False,False
+2025-09,Credit reporting or other personal consumer reports,65,4,Problem with a company's investigation into an existing problem,investigation statement company account,False,False
+2025-09,Credit reporting or other personal consumer reports,52,3,Incorrect information on your report,loan statement company account,False,False
+2025-09,Credit reporting or other personal consumer reports,63,1,Incorrect information on your report,report information investigation account,False,False
+2025-09,Credit reporting or other personal consumer reports,72,2,Problem with a company's investigation into an existing problem,caused information report,True,False
+2025-09,Credit reporting or other personal consumer reports,71,3,Incorrect information on your report,service fraud incorrect investigation,False,False
+2025-09,Credit reporting or other personal consumer reports,55,2,Incorrect information on your report,incorrect information investigation report,False,False
+2025-09,Credit reporting or other personal consumer reports,39,4,Incorrect information on your report,report information account investigation,False,False
+2025-09,Credit reporting or other personal consumer reports,47,4,Incorrect information on your report,opening lease report caused,False,False
+2025-09,Credit reporting or other personal consumer reports,58,2,Incorrect information on your report,report account fraud information,False,False
+2025-09,Credit reporting or other personal consumer reports,38,4,Incorrect information on your report,purchase report information company,False,False
+2025-09,Credit reporting or other personal consumer reports,68,3,Improper use of your report,caused servicer incorrect loan,False,False
+2025-09,Credit reporting or other personal consumer reports,61,6,Incorrect information on your report,account report information caused,False,False
+2025-09,Credit reporting or other personal consumer reports,48,1,Problem with a company's investigation into an existing problem,missing account service information,False,False
+2025-10,Credit reporting or other personal consumer reports,73,7,Incorrect information on your report,information report,True,False
+2025-10,Credit reporting or other personal consumer reports,35,1,Improper use of your report,account information incorrect company,False,False
+2025-10,Credit reporting or other personal consumer reports,37,1,Improper use of your report,investigation fraud report information,False,False
+2025-10,Credit reporting or other personal consumer reports,64,2,Incorrect information on your report,account information company,False,False
+2025-10,Credit reporting or other personal consumer reports,62,3,Incorrect information on your report,fraud account report information,False,False
+2025-10,Credit reporting or other personal consumer reports,40,5,Improper use of your report,company report investigation problem,False,False
+2025-10,Credit reporting or other personal consumer reports,39,14,Incorrect information on your report,report information account company,False,False
+2025-10,Credit reporting or other personal consumer reports,71,14,Incorrect information on your report,service information report investigation,False,False
+2025-10,Credit reporting or other personal consumer reports,65,9,Incorrect information on your report,loan account company information,False,False
+2025-10,Credit reporting or other personal consumer reports,68,2,Incorrect information on your report,incorrect caused servicer information,False,False
+2025-10,Credit reporting or other personal consumer reports,61,8,Incorrect information on your report,account report information caused,False,False
+2025-11,Credit reporting or other personal consumer reports,64,2,Incorrect information on your report,company information account report,False,False
+2025-11,Credit reporting or other personal consumer reports,37,2,Improper use of your report,investigation fraud report information,False,False
+2025-11,Credit reporting or other personal consumer reports,62,1,Improper use of your report,fraud report account information,False,False
+2025-11,Credit reporting or other personal consumer reports,40,2,Improper use of your report,company report problem lender,False,False
+2025-11,Credit reporting or other personal consumer reports,39,11,Incorrect information on your report,report information account company,False,False
+2025-11,Credit reporting or other personal consumer reports,35,3,Problem with a company's investigation into an existing problem,information report incorrect,False,False
+2025-11,Credit reporting or other personal consumer reports,71,8,Incorrect information on your report,service fraud investigation information,False,False
+2025-11,Credit reporting or other personal consumer reports,65,11,Incorrect information on your report,loan statement account servicer,False,False
+2025-11,Credit reporting or other personal consumer reports,73,3,Improper use of your report,information report account,False,False
+2025-11,Credit reporting or other personal consumer reports,61,8,Incorrect information on your report,account report missing information,False,False
+2025-11,Credit reporting or other personal consumer reports,74,7,Problem with a company's investigation into an existing problem,account information report opening,True,False
+2025-11,Credit reporting or other personal consumer reports,68,6,Improper use of your report,account caused incorrect information,False,False
+2025-12,Credit reporting or other personal consumer reports,75,3,Incorrect information on your report,company account,True,False
+2025-12,Credit reporting or other personal consumer reports,76,3,Incorrect information on your report,opening company account report,True,False
+2025-12,Credit reporting or other personal consumer reports,40,7,Incorrect information on your report,company report investigation information,False,False
+2025-12,Credit reporting or other personal consumer reports,39,3,Incorrect information on your report,report information fraud investigation,False,False
+2025-12,Credit reporting or other personal consumer reports,73,2,Incorrect information on your report,information report incorrect,False,False
+2025-12,Credit reporting or other personal consumer reports,71,2,Incorrect information on your report,account shown information investigation,False,False
+2025-12,Credit reporting or other personal consumer reports,35,1,Incorrect information on your report,information report caused investigation,False,False
+2025-12,Credit reporting or other personal consumer reports,77,3,Incorrect information on your report,loan incorrect account investigation,True,False
+2025-12,Credit reporting or other personal consumer reports,65,1,Improper use of your report,statement incorrect investigation report,False,False
+2025-12,Credit reporting or other personal consumer reports,61,1,Incorrect information on your report,account missing shown investigation,False,False
+2025-12,Credit reporting or other personal consumer reports,68,3,Problem with a company's investigation into an existing problem,incorrect account investigation caused,False,False
+2025-12,Credit reporting or other personal consumer reports,74,3,Incorrect information on your report,account information opening report,False,False
+2026-01,Credit reporting or other personal consumer reports,76,1,Incorrect information on your report,company opening incorrect report,False,False
+2026-01,Credit reporting or other personal consumer reports,77,1,Incorrect information on your report,account incorrect statement investigation,False,False
+2026-02,Credit reporting or other personal consumer reports,77,1,Incorrect information on your report,report incorrect service customer,False,False
+2018-07,"Credit reporting, credit repair services, or other personal consumer reports",1,1,Problem with a credit reporting company's investigation into an existing problem,account statement information company,True,False
+2018-07,"Credit reporting, credit repair services, or other personal consumer reports",2,1,Incorrect information on your report,information report company service,True,False
+2019-07,"Credit reporting, credit repair services, or other personal consumer reports",3,2,Incorrect information on your report,information service company report,True,False
+2019-07,"Credit reporting, credit repair services, or other personal consumer reports",4,4,Incorrect information on your report,account report loan information,True,False
+2019-08,"Credit reporting, credit repair services, or other personal consumer reports",3,5,Incorrect information on your report,report information fraud account,False,False
+2019-08,"Credit reporting, credit repair services, or other personal consumer reports",4,1,Problem with a credit reporting company's investigation into an existing problem,account report information purchase,False,False
+2019-09,"Credit reporting, credit repair services, or other personal consumer reports",4,2,Improper use of your report,report account information,False,False
+2019-09,"Credit reporting, credit repair services, or other personal consumer reports",3,5,Incorrect information on your report,information account report company,False,False
+2019-10,"Credit reporting, credit repair services, or other personal consumer reports",4,4,Incorrect information on your report,loan report account incorrect,False,False
+2019-10,"Credit reporting, credit repair services, or other personal consumer reports",3,1,Incorrect information on your report,information report account purchase,False,False
+2020-01,"Credit reporting, credit repair services, or other personal consumer reports",5,1,Incorrect information on your report,statement report information account,True,False
+2020-01,"Credit reporting, credit repair services, or other personal consumer reports",6,5,Incorrect information on your report,report information caused fraud,True,False
+2020-03,"Credit reporting, credit repair services, or other personal consumer reports",7,3,Incorrect information on your report,report account caused information,True,False
+2020-03,"Credit reporting, credit repair services, or other personal consumer reports",8,2,Incorrect information on your report,loan account information company,True,False
+2020-05,"Credit reporting, credit repair services, or other personal consumer reports",9,5,Problem with a credit reporting company's investigation into an existing problem,account information statement loan,True,False
+2020-05,"Credit reporting, credit repair services, or other personal consumer reports",10,12,Incorrect information on your report,report loan incorrect information,True,False
+2020-06,"Credit reporting, credit repair services, or other personal consumer reports",10,6,Incorrect information on your report,report incorrect information account,False,False
+2020-06,"Credit reporting, credit repair services, or other personal consumer reports",9,8,Problem with a credit reporting company's investigation into an existing problem,account information statement report,False,False
+2020-07,"Credit reporting, credit repair services, or other personal consumer reports",10,7,Incorrect information on your report,report company investigation information,False,False
+2020-07,"Credit reporting, credit repair services, or other personal consumer reports",9,3,Incorrect information on your report,account statement loan information,False,False
+2020-07,"Credit reporting, credit repair services, or other personal consumer reports",11,2,Problem with a credit reporting company's investigation into an existing problem,investigation incorrect information account,True,False
+2020-08,"Credit reporting, credit repair services, or other personal consumer reports",10,7,Incorrect information on your report,report company incorrect information,False,False
+2020-08,"Credit reporting, credit repair services, or other personal consumer reports",9,8,Problem with a credit reporting company's investigation into an existing problem,account information statement report,False,False
+2020-09,"Credit reporting, credit repair services, or other personal consumer reports",10,1,Incorrect information on your report,report account fraud information,False,False
+2020-09,"Credit reporting, credit repair services, or other personal consumer reports",12,6,Problem with a credit reporting company's investigation into an existing problem,report investigation information caused,True,False
+2020-09,"Credit reporting, credit repair services, or other personal consumer reports",9,2,Incorrect information on your report,account statement information loan,False,False
+2020-10,"Credit reporting, credit repair services, or other personal consumer reports",10,4,Incorrect information on your report,report statement account fraud,False,False
+2020-10,"Credit reporting, credit repair services, or other personal consumer reports",12,6,Problem with a credit reporting company's investigation into an existing problem,information report account loan,False,False
+2020-11,"Credit reporting, credit repair services, or other personal consumer reports",12,7,Incorrect information on your report,report loan incorrect information,False,False
+2020-11,"Credit reporting, credit repair services, or other personal consumer reports",10,3,Incorrect information on your report,information account report investigation,False,False
+2020-12,"Credit reporting, credit repair services, or other personal consumer reports",10,9,Incorrect information on your report,report information account loan,False,False
+2020-12,"Credit reporting, credit repair services, or other personal consumer reports",12,3,Problem with a credit reporting company's investigation into an existing problem,information report caused account,False,False
+2021-02,"Credit reporting, credit repair services, or other personal consumer reports",13,3,Incorrect information on your report,account report company information,True,False
+2021-02,"Credit reporting, credit repair services, or other personal consumer reports",14,1,Problem with a credit reporting company's investigation into an existing problem,information report caused incorrect,True,False
+2021-03,"Credit reporting, credit repair services, or other personal consumer reports",13,6,Problem with a credit reporting company's investigation into an existing problem,account incorrect lease service,False,False
+2021-03,"Credit reporting, credit repair services, or other personal consumer reports",14,6,Incorrect information on your report,report information account loan,False,False
+2021-04,"Credit reporting, credit repair services, or other personal consumer reports",13,5,Problem with a credit reporting company's investigation into an existing problem,account information report loan,False,False
+2021-04,"Credit reporting, credit repair services, or other personal consumer reports",14,4,Problem with a credit reporting company's investigation into an existing problem,report information caused investigation,False,False
+2021-05,"Credit reporting, credit repair services, or other personal consumer reports",13,2,Incorrect information on your report,account fraud getting loan,False,False
+2021-05,"Credit reporting, credit repair services, or other personal consumer reports",14,8,Problem with a credit reporting company's investigation into an existing problem,report information account company,False,False
+2021-07,"Credit reporting, credit repair services, or other personal consumer reports",15,7,Incorrect information on your report,account information report incorrect,True,False
+2021-07,"Credit reporting, credit repair services, or other personal consumer reports",16,6,Incorrect information on your report,report information problem account,True,False
+2021-08,"Credit reporting, credit repair services, or other personal consumer reports",16,2,Incorrect information on your report,account fraud information report,False,False
+2021-08,"Credit reporting, credit repair services, or other personal consumer reports",15,13,Problem with a credit reporting company's investigation into an existing problem,report information account company,False,False
+2021-09,"Credit reporting, credit repair services, or other personal consumer reports",15,8,Incorrect information on your report,report information account fraud,False,False
+2021-10,"Credit reporting, credit repair services, or other personal consumer reports",16,5,Incorrect information on your report,account report information loan,False,False
+2021-10,"Credit reporting, credit repair services, or other personal consumer reports",15,9,Problem with a credit reporting company's investigation into an existing problem,report information company caused,False,False
+2021-11,"Credit reporting, credit repair services, or other personal consumer reports",17,2,Improper use of your report,lease information report company,True,False
+2021-11,"Credit reporting, credit repair services, or other personal consumer reports",16,2,Incorrect information on your report,account report fraud loan,False,False
+2021-11,"Credit reporting, credit repair services, or other personal consumer reports",15,6,Problem with a credit reporting company's investigation into an existing problem,report information account statement,False,False
+2021-12,"Credit reporting, credit repair services, or other personal consumer reports",15,3,Problem with a credit reporting company's investigation into an existing problem,information account report incorrect,False,False
+2021-12,"Credit reporting, credit repair services, or other personal consumer reports",17,2,Incorrect information on your report,report statement information investigation,False,False
+2021-12,"Credit reporting, credit repair services, or other personal consumer reports",16,6,Incorrect information on your report,account report loan fraud,False,False
+2022-01,"Credit reporting, credit repair services, or other personal consumer reports",17,4,Incorrect information on your report,account information report statement,False,False
+2022-01,"Credit reporting, credit repair services, or other personal consumer reports",16,10,Incorrect information on your report,report information account fraud,False,False
+2022-02,"Credit reporting, credit repair services, or other personal consumer reports",17,4,Incorrect information on your report,account report information statement,False,False
+2022-03,"Credit reporting, credit repair services, or other personal consumer reports",17,5,Problem with a credit reporting company's investigation into an existing problem,account loan report company,False,False
+2022-03,"Credit reporting, credit repair services, or other personal consumer reports",16,17,Incorrect information on your report,report information account fraud,False,False
+2022-04,"Credit reporting, credit repair services, or other personal consumer reports",18,13,Improper use of your report,account information report fraud,True,False
+2022-04,"Credit reporting, credit repair services, or other personal consumer reports",17,17,Problem with a credit reporting company's investigation into an existing problem,report account information company,False,False
+2022-05,"Credit reporting, credit repair services, or other personal consumer reports",18,16,Improper use of your report,account information report company,False,False
+2022-05,"Credit reporting, credit repair services, or other personal consumer reports",17,22,Incorrect information on your report,report information account company,False,False
+2022-06,"Credit reporting, credit repair services, or other personal consumer reports",17,19,Incorrect information on your report,report information account fraud,False,False
+2022-06,"Credit reporting, credit repair services, or other personal consumer reports",19,6,Improper use of your report,account information report,True,False
+2022-06,"Credit reporting, credit repair services, or other personal consumer reports",18,9,Improper use of your report,account incorrect report information,False,False
+2022-06,"Credit reporting, credit repair services, or other personal consumer reports",20,2,Improper use of your report,information report account company,True,False
+2022-07,"Credit reporting, credit repair services, or other personal consumer reports",18,6,Improper use of your report,account information report incorrect,False,False
+2022-07,"Credit reporting, credit repair services, or other personal consumer reports",17,29,Incorrect information on your report,report information account fraud,False,False
+2022-08,"Credit reporting, credit repair services, or other personal consumer reports",18,8,Improper use of your report,account information statement report,False,False
+2022-08,"Credit reporting, credit repair services, or other personal consumer reports",21,5,Problem with a credit reporting company's investigation into an existing problem,information account report company,True,False
+2022-08,"Credit reporting, credit repair services, or other personal consumer reports",17,13,Incorrect information on your report,report information fraud account,False,False
+2022-08,"Credit reporting, credit repair services, or other personal consumer reports",22,11,Problem with a credit reporting company's investigation into an existing problem,report information loan company,True,False
+2022-09,"Credit reporting, credit repair services, or other personal consumer reports",18,6,Improper use of your report,account information customer statement,False,False
+2022-09,"Credit reporting, credit repair services, or other personal consumer reports",17,6,Incorrect information on your report,report information fraud account,False,False
+2022-09,"Credit reporting, credit repair services, or other personal consumer reports",22,17,Problem with a credit reporting company's investigation into an existing problem,report information account company,False,False
+2022-10,"Credit reporting, credit repair services, or other personal consumer reports",23,5,Improper use of your report,company information service report,True,False
+2022-10,"Credit reporting, credit repair services, or other personal consumer reports",18,10,Improper use of your report,account report company information,False,False
+2022-10,"Credit reporting, credit repair services, or other personal consumer reports",24,6,Incorrect information on your report,low getting problem company,True,False
+2022-10,"Credit reporting, credit repair services, or other personal consumer reports",22,4,Problem with a credit reporting company's investigation into an existing problem,account information report getting,False,False
+2022-10,"Credit reporting, credit repair services, or other personal consumer reports",17,19,Incorrect information on your report,report information loan account,False,False
+2022-11,"Credit reporting, credit repair services, or other personal consumer reports",18,11,Improper use of your report,account information report company,False,False
+2022-11,"Credit reporting, credit repair services, or other personal consumer reports",17,30,Problem with a credit reporting company's investigation into an existing problem,report information account company,False,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",25,5,Improper use of your report,fraud company information report,True,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",26,5,Improper use of your report,loan fraud incorrect report,True,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",27,1,Problem with a credit reporting company's investigation into an existing problem,low company getting loan,True,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",28,7,Incorrect information on your report,account report information shown,True,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",17,9,Improper use of your report,report information caused statement,False,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",18,4,Improper use of your report,account information report,False,False
+2022-12,"Credit reporting, credit repair services, or other personal consumer reports",29,6,Incorrect information on your report,information report investigation account,True,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",30,7,Incorrect information on your report,report incorrect investigation account,True,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",28,3,Problem with a credit reporting company's investigation into an existing problem,report information account incorrect,False,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",26,3,Incorrect information on your report,information getting fraud report,False,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",27,20,Incorrect information on your report,report information loan account,False,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",18,2,Improper use of your report,account company report,False,False
+2023-01,"Credit reporting, credit repair services, or other personal consumer reports",29,5,Improper use of your report,account information report,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",18,4,Improper use of your report,account company report,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",29,4,Improper use of your report,information report account company,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",28,13,Problem with a credit reporting company's investigation into an existing problem,report incorrect information investigation,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",27,5,Problem with a credit reporting company's investigation into an existing problem,caused company report dealing,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",30,1,Incorrect information on your report,incorrect report fraud information,False,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",31,4,Incorrect information on your report,fraud report statement information,True,False
+2023-02,"Credit reporting, credit repair services, or other personal consumer reports",32,5,Problem with a credit reporting company's investigation into an existing problem,loan account service information,True,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",31,9,Incorrect information on your report,fraud report information company,False,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",18,8,Improper use of your report,account information report company,False,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",34,4,Incorrect information on your report,company report information fraud,True,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",32,6,Problem with a credit reporting company's investigation into an existing problem,account loan information service,False,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",35,1,Problem with a credit reporting company's investigation into an existing problem,investigation company information report,True,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",36,5,Problem with a credit reporting company's investigation into an existing problem,report information,True,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",28,4,Problem with a credit reporting company's investigation into an existing problem,investigation incorrect report information,False,False
+2023-03,"Credit reporting, credit repair services, or other personal consumer reports",30,3,Improper use of your report,loan report caused incorrect,False,False
+2023-04,"Credit reporting, credit repair services, or other personal consumer reports",18,10,Improper use of your report,account information report disclosures,False,False
+2023-04,"Credit reporting, credit repair services, or other personal consumer reports",36,3,Problem with a credit reporting company's investigation into an existing problem,report shown information investigation,False,False
+2023-04,"Credit reporting, credit repair services, or other personal consumer reports",31,5,Incorrect information on your report,fraud report information incorrect,False,False
+2023-04,"Credit reporting, credit repair services, or other personal consumer reports",32,22,Improper use of your report,account report information company,False,False
+2023-04,"Credit reporting, credit repair services, or other personal consumer reports",34,4,Incorrect information on your report,report investigation confusing customer,False,False
+2023-05,"Credit reporting, credit repair services, or other personal consumer reports",31,8,Incorrect information on your report,fraud information statement incorrect,False,False
+2023-05,"Credit reporting, credit repair services, or other personal consumer reports",32,60,Incorrect information on your report,account report information company,False,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",31,7,Improper use of your report,fraud lease disclosures caused,False,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",37,11,Improper use of your report,account information report company,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",38,4,Incorrect information on your report,information loan account report,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",39,6,Problem with a credit reporting company's investigation into an existing problem,information report incorrect investigation,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",40,6,Incorrect information on your report,fraud investigation report shown,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",42,4,Incorrect information on your report,opening report information account,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",43,3,Improper use of your report,problem report company information,True,False
+2023-06,"Credit reporting, credit repair services, or other personal consumer reports",32,7,Problem with a credit reporting company's investigation into an existing problem,report company investigation information,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",31,2,Incorrect information on your report,fraud lease statement information,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",44,3,Improper use of your report,account report information,True,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",37,5,Improper use of your report,information account report company,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",39,7,Problem with a credit reporting company's investigation into an existing problem,report information incorrect account,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",40,5,Incorrect information on your report,report fraud information loan,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",41,6,Incorrect information on your report,incorrect company report information,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",38,1,Improper use of your report,report account investigation company,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",45,4,Incorrect information on your report,company report caused loan,True,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",42,3,Incorrect information on your report,report information,False,False
+2023-07,"Credit reporting, credit repair services, or other personal consumer reports",32,6,Incorrect information on your report,investigation fraud opening information,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",37,7,Improper use of your report,information account report company,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",40,4,Incorrect information on your report,fraud information report statement,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",39,10,Problem with a credit reporting company's investigation into an existing problem,incorrect report information investigation,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",42,11,Incorrect information on your report,report account fraud information,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",41,3,Incorrect information on your report,incorrect report investigation account,False,False
+2023-08,"Credit reporting, credit repair services, or other personal consumer reports",45,8,Incorrect information on your report,account report information company,False,False
+2024-02,Debt collection,1,1,Attempts to collect debt not owed,report information account investigation,True,False
+2024-02,Debt collection,2,3,Written notification about debt,company fraud incorrect information,True,False
+2024-03,Debt collection,3,4,Written notification about debt,report account customer service,True,False
+2024-03,Debt collection,2,8,Attempts to collect debt not owed,company information account report,False,False
+2024-04,Debt collection,3,4,Written notification about debt,report incorrect loan information,False,False
+2024-04,Debt collection,2,7,Written notification about debt,account report information company,False,False
+2024-05,Debt collection,3,3,Written notification about debt,report incorrect loan information,False,False
+2024-05,Debt collection,2,12,Attempts to collect debt not owed,account report information company,False,False
+2024-06,Debt collection,2,1,Written notification about debt,account report information company,False,False
+2024-08,Debt collection,4,3,Attempts to collect debt not owed,report account information incorrect,True,False
+2024-08,Debt collection,5,6,Attempts to collect debt not owed,company account information fraud,True,False
+2024-09,Debt collection,4,1,Attempts to collect debt not owed,report account information incorrect,False,False
+2024-09,Debt collection,5,3,False statements or representation,company fraud account information,False,False
+2024-10,Debt collection,5,4,Written notification about debt,company information fraud report,False,False
+2024-10,Debt collection,4,5,Attempts to collect debt not owed,account report information company,False,False
+2024-12,Debt collection,6,3,Attempts to collect debt not owed,company shown information report,True,False
+2024-12,Debt collection,7,9,Attempts to collect debt not owed,account information report company,True,False
+2025-01,Debt collection,7,4,Attempts to collect debt not owed,report account information existing,False,False
+2025-01,Debt collection,6,11,Attempts to collect debt not owed,company information account report,False,False
+2025-03,Debt collection,8,3,Attempts to collect debt not owed,report account information incorrect,True,False
+2025-03,Debt collection,9,8,Attempts to collect debt not owed,company fraud information loan,True,False
+2025-04,Debt collection,8,2,Attempts to collect debt not owed,report information account incorrect,False,False
+2025-04,Debt collection,9,3,Attempts to collect debt not owed,account company lease information,False,False
+2025-05,Debt collection,9,3,Electronic communications,account company information getting,False,False
+2025-05,Debt collection,8,3,Attempts to collect debt not owed,report information account incorrect,False,False
+2025-08,Debt collection,10,2,Attempts to collect debt not owed,report account information fraud,True,False
+2025-08,Debt collection,11,9,Attempts to collect debt not owed,account company information loan,True,False
+2025-09,Debt collection,11,1,Took or threatened to take negative or legal action,company account loan information,False,False
+2025-09,Debt collection,10,11,Attempts to collect debt not owed,account report information investigation,False,False
+2025-10,Debt collection,10,2,Attempts to collect debt not owed,report account investigation information,False,False
+2025-10,Debt collection,11,4,Written notification about debt,company service account purchase,False,False
+2025-10,Debt collection,12,7,Attempts to collect debt not owed,company caused account information,True,False
+2025-11,Debt collection,10,1,Attempts to collect debt not owed,report account information investigation,False,False
+2025-11,Debt collection,12,3,False statements or representation,account information company report,False,False
+2025-12,Debt collection,13,1,Took or threatened to take negative or legal action,customer information company service,True,False
+2025-12,Debt collection,10,1,Attempts to collect debt not owed,information report account statement,False,False
+2025-12,Debt collection,12,3,Attempts to collect debt not owed,account report information statement,False,False
+2026-01,Debt collection,14,4,Attempts to collect debt not owed,investigation report account company,True,False
+2026-01,Debt collection,10,7,False statements or representation,account information report company,False,False
+2026-01,Debt collection,13,5,False statements or representation,information statement account company,False,False
+2026-02,Debt collection,14,2,Attempts to collect debt not owed,investigation report account company,False,False
+2026-02,Debt collection,10,1,Communication tactics,information account report disclosures,False,False
+2026-03,Debt collection,14,2,Attempts to collect debt not owed,investigation report account company,False,False
+2026-03,Debt collection,10,12,Attempts to collect debt not owed,account information report lease,False,False
+2026-04,Debt collection,10,1,False statements or representation,account information report getting,False,False
+2026-04,Debt collection,15,8,Attempts to collect debt not owed,account report information investigation,True,False
+2025-01,"Money transfer, virtual currency, or money service",1,18,Other transaction problem,funds scam report caused,True,False
+2025-01,"Money transfer, virtual currency, or money service",2,35,Other transaction problem,account service customer fraud,True,False
+2025-02,"Money transfer, virtual currency, or money service",1,3,Other transaction problem,funds scam report caused,False,False
+2025-02,"Money transfer, virtual currency, or money service",2,13,Other transaction problem,account customer service fraud,False,False
+2025-03,"Money transfer, virtual currency, or money service",2,6,Fraud or scam,account customer service fraud,False,False
+2025-04,"Money transfer, virtual currency, or money service",4,2,Fraud or scam,account company fraud statement,True,False

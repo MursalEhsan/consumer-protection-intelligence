@@ -1,0 +1,7 @@
+window_months: 3
+minimum_cluster_size: 5
+minimum_window_size: 12
+cosine_link: 0.80
+seed: 427
+event_window_before_months: 2
+event_window_after_months: 2
