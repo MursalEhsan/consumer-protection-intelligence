@@ -51,3 +51,9 @@ logs/
 *.part
 
 docs/development/
+
+!reports/*.csv
+!reports/*.parquet
+!sql/issue_crosswalk.csv
+!docs/backtest_events.csv
+!tests/fixtures/*.parquet
