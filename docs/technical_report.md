@@ -50,3 +50,9 @@ make run
 make report
 make app
 ```
+
+## Product series
+
+[Full product aggregates](../reports/product_monthly.parquet) retain counts and within-product denominators. In the overall series, credit reporting volume changes the weight of unrelated products. [Coverage inventory](../reports/taxonomy_coverage.csv) records observed first, last, and absent months. Its regression test forces review when coverage changes. A missing published cell has an unknown cause. The [crosswalk](../sql/issue_crosswalk.csv) groups two wording families and otherwise preserves exact names. It is partial. The CFPB [form revisions](https://www.consumerfinance.gov/data-research/consumer-complaints/#past-product-and-issue-updates) document the historical menus. The inventory is not evidence of equivalence across every revision.
+
+The [comparison](../reports/backtest.md) uses a single revised snapshot, so its time ordering excludes future counts from training but cannot recreate past publication vintages. [Spike power](../reports/spike_power.csv) uses sustained two-month injections in historical series stratified by expected volume. A simulated hit does not verify a real incident. A governance review must decide which taxonomy changes have adequate documentary support.

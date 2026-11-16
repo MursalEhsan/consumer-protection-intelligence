@@ -1,0 +1,13 @@
+window: 36
+family_alpha: 0.01
+consecutive: 2
+maturity_days: 15
+z: 3
+ewma_alpha: 0.3
+min_history_volume: 1
+start: 2022-01
+event_lag_months: 2
+spikes: [1.5, 2, 3]
+seed: 427
+max_missing_fraction: {Product: 0.01, Issue: 0.10}
+archive_start: 2011-12-01

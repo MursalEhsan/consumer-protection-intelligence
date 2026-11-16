@@ -1,0 +1,349 @@
+product,issue,first,last,interior_absent_months,status
+Bank account or service,"Account opening, closing, or management",2012-03,2017-04,,disappeared; cause unverified
+Bank account or service,Deposits and withdrawals,2012-03,2017-04,,disappeared; cause unverified
+Bank account or service,"Making/receiving payments, sending money",2012-03,2017-04,,disappeared; cause unverified
+Bank account or service,Problems caused by my funds being low,2012-03,2017-04,,disappeared; cause unverified
+Bank account or service,Using a debit or ATM card,2012-03,2017-04,,disappeared; cause unverified
+Checking or savings account,(unspecified),2024-03,2024-05,,disappeared; cause unverified
+Checking or savings account,Closing an account,2017-04,2026-09,,still observed
+Checking or savings account,Credit monitoring or identity theft protection services,2017-05,2026-09,2017-07 2017-08 2017-12 2018-02 2018-03 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2019-04 2019-05 2019-06 2019-08 2019-09 2019-10 2019-11 2019-12 2020-02 2020-03 2020-09 2020-11 2020-12 2021-02 2021-03 2021-05 2021-06 2021-07 2021-10 2022-01 2022-02 2022-04 2022-08 2022-10,still observed
+Checking or savings account,Getting a line of credit,2018-06,2019-07,2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06,disappeared; cause unverified
+Checking or savings account,Improper use of your report,2017-04,2026-09,2017-06 2018-09 2020-04 2020-05 2020-09 2021-10 2021-11 2022-12,still observed
+Checking or savings account,Incorrect information on your report,2017-05,2026-09,,still observed
+Checking or savings account,Managing an account,2017-04,2026-09,,still observed
+Checking or savings account,Opening an account,2017-04,2026-09,,still observed
+Checking or savings account,Problem caused by your funds being low,2017-04,2026-09,,still observed
+Checking or savings account,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Checking or savings account,Problem with a credit reporting company's investigation into an existing problem,2017-05,2023-08,2017-06 2017-10 2018-03 2018-06 2018-10 2019-03 2019-04 2019-06 2020-02 2020-04 2020-05 2021-05 2021-07 2021-12 2022-06,disappeared; cause unverified
+Checking or savings account,Problem with a lender or other company charging your account,2017-04,2026-09,,still observed
+Checking or savings account,Problem with credit report or credit score,2020-11,2021-04,2020-12 2021-01 2021-02 2021-03,disappeared; cause unverified
+Checking or savings account,Problem with fraud alerts or security freezes,2017-05,2026-09,2017-06 2017-08 2017-11 2017-12 2018-02 2018-04 2018-05 2018-10 2018-11 2018-12 2019-01 2019-07 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-06 2020-07 2020-08 2020-10 2020-11 2020-12 2021-12 2022-01 2022-02 2022-03 2022-05 2023-04 2024-04 2026-02,still observed
+Checking or savings account,Unable to get your credit report or credit score,2017-07,2026-07,2017-09 2017-11 2018-01 2018-02 2018-03 2018-05 2018-06 2018-08 2018-09 2018-10 2018-11 2019-01 2019-03 2019-04 2019-05 2019-07 2019-08 2019-09 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-06 2020-09 2020-10 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-07 2021-08 2021-09 2021-11 2022-01 2022-02 2022-03 2022-04 2022-05 2022-06 2022-07 2022-09 2022-10 2023-02 2023-03 2023-04 2023-05 2023-06 2023-08 2023-09 2023-11 2023-12 2024-01 2024-02 2024-03 2024-04 2024-05 2024-06 2024-07 2024-10 2025-03 2025-04 2025-05 2025-06 2025-07 2025-12,disappeared; cause unverified
+Consumer Loan,Account terms and changes,2012-03,2017-04,2016-11 2017-01,disappeared; cause unverified
+Consumer Loan,Applied for loan/did not receive money,2014-09,2017-04,2015-01 2015-05 2015-06 2015-10 2015-12 2016-01 2016-02 2016-05 2016-06 2016-07 2016-09 2017-01,disappeared; cause unverified
+Consumer Loan,Can't contact lender,2014-07,2017-04,2014-08,disappeared; cause unverified
+Consumer Loan,Can't stop charges to bank account,2014-07,2017-02,2014-08 2014-09 2014-10 2014-11 2014-12 2015-01 2015-02 2015-03 2015-04 2015-07 2015-08 2015-09 2015-10 2015-11 2015-12 2016-02 2016-04 2016-05 2016-08 2016-09 2016-10 2016-12,disappeared; cause unverified
+Consumer Loan,Charged bank acct wrong day or amt,2014-11,2017-03,2015-01 2015-02 2015-03 2015-04 2015-06 2015-07 2015-08 2015-10 2015-11 2015-12 2016-01 2016-02 2016-03 2016-04 2016-06 2016-07 2016-08 2016-09 2016-11 2017-02,disappeared; cause unverified
+Consumer Loan,Charged fees or interest I didn't expect,2014-07,2017-04,,disappeared; cause unverified
+Consumer Loan,Lender damaged or destroyed property,2014-10,2017-03,2014-11 2014-12 2015-01 2015-02 2015-03 2015-04 2015-05 2015-06 2015-07 2015-08 2015-09 2015-10 2015-11 2015-12 2016-01 2016-02 2016-03 2016-04 2016-05 2016-06 2016-07 2016-08 2016-09 2016-10 2016-11 2016-12 2017-01,disappeared; cause unverified
+Consumer Loan,Lender damaged or destroyed vehicle,2014-09,2017-03,2014-10 2014-11 2015-02 2015-03 2015-04 2015-05 2015-06 2015-07 2015-08 2015-10 2015-11 2015-12 2016-01 2016-02 2016-03 2016-04 2016-06 2016-07 2016-08 2016-09 2016-10 2016-11 2016-12 2017-01 2017-02,disappeared; cause unverified
+Consumer Loan,Lender repossessed or sold the vehicle,2014-07,2017-04,2016-02,disappeared; cause unverified
+Consumer Loan,Lender sold the property,2014-09,2016-09,2014-10 2014-12 2015-01 2015-02 2015-03 2015-04 2015-06 2015-08 2015-09 2015-10 2015-11 2015-12 2016-01 2016-02 2016-03 2016-04 2016-05 2016-07 2016-08,disappeared; cause unverified
+Consumer Loan,Managing the line of credit,2012-03,2017-04,,disappeared; cause unverified
+Consumer Loan,Managing the loan or lease,2012-03,2017-04,,disappeared; cause unverified
+Consumer Loan,Payment to acct not credited,2014-07,2017-04,2014-08 2015-05 2015-07 2016-01,disappeared; cause unverified
+Consumer Loan,Problems when you are unable to pay,2012-03,2017-04,,disappeared; cause unverified
+Consumer Loan,Received a loan I didn't apply for,2014-10,2017-04,2014-12 2015-01 2015-03 2015-04 2015-08 2015-09 2015-11 2015-12 2016-01 2016-03 2016-05 2016-11 2016-12 2017-01 2017-03,disappeared; cause unverified
+Consumer Loan,Shopping for a line of credit,2012-03,2017-04,2013-09 2015-02,disappeared; cause unverified
+Consumer Loan,Shopping for a loan or lease,2012-03,2017-04,,disappeared; cause unverified
+Consumer Loan,Taking out the loan or lease,2012-03,2017-04,,disappeared; cause unverified
+Credit card,APR or interest rate,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Advertising and marketing,2011-12,2017-04,,disappeared; cause unverified
+Credit card,"Advertising and marketing, including promotional offers",2023-08,2026-09,,still observed
+Credit card,Application processing delay,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Arbitration,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Balance transfer,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Balance transfer fee,2011-12,2017-04,2013-04 2013-09 2014-06,disappeared; cause unverified
+Credit card,Bankruptcy,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Billing disputes,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Billing statement,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Cash advance,2011-12,2017-04,2012-03 2015-01,disappeared; cause unverified
+Credit card,Cash advance fee,2011-12,2017-04,2014-06 2014-09 2017-02,disappeared; cause unverified
+Credit card,Closing your account,2023-08,2026-09,,still observed
+Credit card,Closing/Cancelling account,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Collection debt dispute,2011-12,2013-07,,disappeared; cause unverified
+Credit card,Collection practices,2011-12,2013-07,,disappeared; cause unverified
+Credit card,Convenience checks,2011-12,2017-04,2013-02 2013-03 2013-05 2013-10 2013-12 2015-08 2015-12 2016-03 2016-04,disappeared; cause unverified
+Credit card,Credit card protection / Debt protection,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Credit determination,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Credit line increase/decrease,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Credit monitoring or identity theft protection services,2023-08,2026-09,,still observed
+Credit card,Credit reporting,2011-12,2013-04,,disappeared; cause unverified
+Credit card,Customer service / Customer relations,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Delinquent account,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Fees or interest,2023-08,2026-09,,still observed
+Credit card,Forbearance / Workout plans,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Getting a credit card,2023-08,2026-09,,still observed
+Credit card,Identity theft / Fraud / Embezzlement,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Improper use of your report,2023-08,2026-09,,still observed
+Credit card,Incorrect information on your report,2023-08,2026-09,,still observed
+Credit card,Late fee,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Other,2011-12,2017-04,,disappeared; cause unverified
+Credit card,"Other features, terms, or problems",2023-08,2026-09,,still observed
+Credit card,Other fee,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Overlimit fee,2011-12,2017-04,2016-08,disappeared; cause unverified
+Credit card,Payoff process,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Privacy,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Problem when making payments,2023-08,2026-09,,still observed
+Credit card,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Credit card,Problem with a purchase shown on your statement,2023-08,2026-09,,still observed
+Credit card,Problem with fraud alerts or security freezes,2023-09,2026-09,,still observed
+Credit card,Rewards,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Sale of account,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Struggling to pay your bill,2023-08,2026-09,,still observed
+Credit card,Transaction issue,2011-12,2017-04,,disappeared; cause unverified
+Credit card,Trouble using your card,2023-08,2026-09,,still observed
+Credit card,Unable to get your credit report or credit score,2023-09,2026-09,2025-09,still observed
+Credit card,Unsolicited issuance of credit card,2011-12,2017-04,,disappeared; cause unverified
+Credit card or prepaid card,Advertising,2017-04,2023-08,2018-08,disappeared; cause unverified
+Credit card or prepaid card,"Advertising and marketing, including promotional offers",2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Closing your account,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Credit monitoring or identity theft protection services,2017-08,2023-08,2017-11 2019-02 2019-05 2020-02 2020-07 2021-01,disappeared; cause unverified
+Credit card or prepaid card,Fees or interest,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Getting a credit card,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Improper use of your report,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Incorrect information on your report,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,"Managing, opening, or closing your mobile wallet account",2021-03,2021-04,,disappeared; cause unverified
+Credit card or prepaid card,"Other features, terms, or problems",2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem getting a card or closing an account,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem when making payments,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem with a purchase or transfer,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem with a purchase shown on your statement,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Problem with an overdraft,2017-07,2022-04,2017-08 2017-09 2017-10 2017-11 2017-12 2018-01 2018-02 2018-03 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-04 2019-06 2019-07 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-08 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-05 2021-06 2021-07 2021-08 2021-09 2021-10 2021-11 2022-01 2022-02 2022-03,disappeared; cause unverified
+Credit card or prepaid card,Problem with credit report or credit score,2017-09,2021-05,2017-10 2017-11 2017-12 2018-01 2018-02 2018-03 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10,disappeared; cause unverified
+Credit card or prepaid card,Problem with fraud alerts or security freezes,2017-04,2023-08,2017-05 2017-08 2017-10 2017-11 2017-12 2018-02 2018-03 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-12 2019-05 2019-08 2019-11 2019-12 2020-02 2020-05 2020-06 2020-08 2020-09 2020-11 2021-01 2021-05 2021-07 2021-10 2022-02 2022-04 2022-07,disappeared; cause unverified
+Credit card or prepaid card,Problem with overdraft,2017-05,2023-07,2017-07 2017-11 2017-12 2018-02 2018-03 2018-04 2018-07 2018-08 2018-12 2019-01 2019-06 2019-07 2019-08 2019-10 2019-11 2020-04 2020-08 2021-04 2021-05 2021-06 2021-07 2021-09 2021-12 2022-01 2022-06 2022-11,disappeared; cause unverified
+Credit card or prepaid card,Struggling to pay your bill,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Trouble using the card,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Trouble using your card,2017-04,2023-08,,disappeared; cause unverified
+Credit card or prepaid card,Unable to get your credit report or credit score,2017-04,2023-08,2017-05 2017-12 2018-03 2018-11 2019-12 2020-03 2020-09 2020-10 2020-12 2021-01 2021-03 2021-05 2021-06 2021-07 2021-08 2022-02 2022-03 2023-03,disappeared; cause unverified
+Credit card or prepaid card,Unexpected or other fees,2017-04,2023-08,,disappeared; cause unverified
+Credit reporting,Credit monitoring or identity protection,2012-10,2017-04,,disappeared; cause unverified
+Credit reporting,Credit reporting company's investigation,2012-10,2017-04,,disappeared; cause unverified
+Credit reporting,Improper use of my credit report,2012-10,2017-04,,disappeared; cause unverified
+Credit reporting,Incorrect information on credit report,2012-10,2017-04,,disappeared; cause unverified
+Credit reporting,Unable to get credit report/credit score,2012-10,2017-04,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,(unspecified),2024-04,2024-04,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,"Advertising and marketing, including promotional offers",2023-09,2023-09,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Credit monitoring or identity theft protection services,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Dealing with your lender or servicer,2025-02,2025-03,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Getting a credit card,2023-12,2023-12,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Getting a loan,2024-12,2024-12,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Identity theft protection or other monitoring services,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Improper use of your report,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Incorrect information on your report,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Managing an account,2025-01,2025-01,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,"Other features, terms, or problems",2024-11,2024-11,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing issue,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Problem with a credit reporting company's investigation into an existing problem,2023-08,2023-08,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Problem with a purchase shown on your statement,2023-11,2025-02,2023-12 2024-01 2024-02 2024-03 2024-04 2024-05 2024-06 2024-07 2024-08 2024-09 2024-10 2024-11 2024-12 2025-01,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Problem with fraud alerts or security freezes,2023-08,2026-09,,still observed
+Credit reporting or other personal consumer reports,Problems at the end of the loan or lease,2024-03,2025-01,2024-04 2024-05 2024-06 2024-07 2024-08 2024-09 2024-10 2024-11 2024-12,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Struggling to repay your loan,2025-02,2025-02,,disappeared; cause unverified
+Credit reporting or other personal consumer reports,Unable to get your credit report or credit score,2023-08,2026-09,,still observed
+"Credit reporting, credit repair services, or other personal consumer reports",Closing an account,2022-10,2022-10,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Closing on a mortgage,2017-11,2017-11,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Closing your account,2021-03,2021-03,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Confusing or misleading advertising or marketing,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Confusing or missing disclosures,2017-04,2023-08,2018-11 2020-04,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Credit monitoring or identity theft protection services,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Dealing with your lender or servicer,2018-12,2021-10,2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-07 2021-08 2021-09,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Excessive fees,2017-05,2023-08,2017-06 2017-12 2018-09 2018-11 2019-03 2020-05 2021-01,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Fees or interest,2021-05,2021-05,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Fraud or scam,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Getting a credit card,2017-08,2023-08,2017-09 2017-10 2017-11 2017-12 2018-01 2018-02 2018-03 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-05 2021-06 2021-07 2021-08 2021-09 2021-10 2021-11 2021-12 2022-01 2022-02 2022-04 2022-05 2022-07 2022-08 2022-10 2022-12 2023-01 2023-02 2023-03 2023-04 2023-05 2023-06 2023-07,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Getting a line of credit,2021-01,2021-01,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Getting a loan,2022-02,2023-01,2022-03 2022-04 2022-05 2022-06 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Getting a loan or lease,2019-05,2022-01,2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-08 2021-09 2021-10 2021-11 2021-12,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Getting the loan,2020-05,2020-05,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Identity theft protection or other monitoring services,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Improper use of your report,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Incorrect information on your report,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports","Other features, terms, or problems",2023-06,2023-06,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem when making payments,2017-11,2017-11,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem with a company's investigation into an existing issue,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem with customer service,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem with fraud alerts or security freezes,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problem with the payoff process at the end of the loan,2018-04,2018-04,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Problems at the end of the loan or lease,2021-02,2021-02,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Struggling to pay mortgage,2018-05,2018-05,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Struggling to pay your loan,2023-02,2023-02,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Trouble during payment process,2022-05,2023-02,2022-06 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12 2023-01,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Trouble using your card,2022-02,2022-02,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Unable to get your credit report or credit score,2017-04,2023-08,,disappeared; cause unverified
+"Credit reporting, credit repair services, or other personal consumer reports",Unexpected or other fees,2017-04,2023-08,,disappeared; cause unverified
+Debt collection,Attempts to collect debt not owed,2017-04,2026-09,,still observed
+Debt collection,Communication tactics,2013-07,2026-09,,still observed
+Debt collection,Cont'd attempts collect debt not owed,2013-07,2017-04,,disappeared; cause unverified
+Debt collection,Disclosure verification of debt,2013-07,2017-04,,disappeared; cause unverified
+Debt collection,Electronic communications,2023-08,2026-09,,still observed
+Debt collection,False statements or representation,2013-07,2026-09,,still observed
+Debt collection,Improper contact or sharing of info,2013-07,2017-04,,disappeared; cause unverified
+Debt collection,Taking/threatening an illegal action,2013-07,2017-04,,disappeared; cause unverified
+Debt collection,Threatened to contact someone or share information improperly,2017-04,2026-09,,still observed
+Debt collection,Took or threatened to take negative or legal action,2017-04,2026-09,,still observed
+Debt collection,Written notification about debt,2017-04,2026-09,,still observed
+Debt or credit management,Charged upfront or unexpected fees,2023-08,2026-09,,still observed
+Debt or credit management,Confusing or misleading advertising or marketing,2023-08,2026-09,,still observed
+Debt or credit management,Confusing or missing disclosures,2023-08,2026-09,,still observed
+Debt or credit management,Didn't provide services promised,2023-08,2026-09,,still observed
+Debt or credit management,Problem with customer service,2023-08,2026-09,,still observed
+Debt or credit management,Unauthorized withdrawals or charges,2023-08,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Confusing or misleading advertising or marketing,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Confusing or missing disclosures,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Fraud or scam,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Incorrect exchange rate,2017-04,2026-09,2017-08 2017-09 2018-03 2018-12 2019-02 2019-07 2019-09 2020-01 2020-02 2020-04 2020-08 2020-09 2020-12 2021-05 2021-08 2021-09 2021-10 2021-12 2022-02 2022-09 2023-05 2026-06 2026-07,still observed
+"Money transfer, virtual currency, or money service",Lost or stolen check,2017-05,2023-08,2018-08 2019-06 2020-02,disappeared; cause unverified
+"Money transfer, virtual currency, or money service",Lost or stolen money order,2017-05,2026-09,2017-06 2018-12 2021-05 2021-06,still observed
+"Money transfer, virtual currency, or money service","Managing, opening, or closing your mobile wallet account",2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Money was not available when promised,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Other service problem,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Other transaction problem,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service","Overdraft, savings, or rewards features",2017-05,2026-09,2017-07 2017-11 2017-12 2018-01 2018-02 2018-03 2018-04 2018-06 2018-07 2018-08 2018-10 2018-12 2019-02 2019-06 2019-08 2019-09 2019-10 2020-01 2020-04 2020-09 2020-10 2021-05 2022-01 2022-09 2023-01 2024-04,still observed
+"Money transfer, virtual currency, or money service",Problem adding money,2017-05,2026-09,2018-04 2018-09 2018-11 2018-12 2020-02 2024-02,still observed
+"Money transfer, virtual currency, or money service",Problem with customer service,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Trouble accessing funds in your mobile or digital wallet,2023-08,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Unauthorized transactions or other transaction problem,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Unexpected or other fees,2017-04,2026-09,,still observed
+"Money transfer, virtual currency, or money service",Wrong amount charged or received,2017-04,2026-09,,still observed
+Money transfers,Fraud or scam,2013-04,2017-04,,disappeared; cause unverified
+Money transfers,Incorrect/missing disclosures or info,2013-04,2017-04,,disappeared; cause unverified
+Money transfers,Money was not available when promised,2013-04,2017-04,,disappeared; cause unverified
+Money transfers,Other service issues,2013-04,2017-04,,disappeared; cause unverified
+Money transfers,Other transaction issues,2013-04,2017-04,,disappeared; cause unverified
+Money transfers,Wrong amount charged or received,2013-04,2017-04,,disappeared; cause unverified
+Mortgage,"Application, originator, mortgage broker",2011-12,2017-04,,disappeared; cause unverified
+Mortgage,Applying for a mortgage or refinancing an existing mortgage,2017-04,2026-09,,still observed
+Mortgage,Closing on a mortgage,2017-04,2026-09,,still observed
+Mortgage,Credit decision / Underwriting,2011-12,2017-04,,disappeared; cause unverified
+Mortgage,Credit monitoring or identity theft protection services,2017-04,2026-08,2017-07 2017-09 2017-11 2017-12 2018-05 2018-07 2018-08 2018-10 2018-11 2019-02 2019-05 2019-06 2019-08 2019-09 2019-11 2019-12 2020-12 2021-01 2021-02 2021-10 2022-12 2023-04 2025-03,disappeared; cause unverified
+Mortgage,Improper use of your report,2017-05,2026-09,2019-06 2019-11,still observed
+Mortgage,Incorrect information on your report,2017-04,2026-09,,still observed
+Mortgage,"Loan modification,collection,foreclosure",2011-12,2017-04,,disappeared; cause unverified
+Mortgage,"Loan servicing, payments, escrow account",2011-12,2017-04,,disappeared; cause unverified
+Mortgage,Other,2011-12,2017-04,,disappeared; cause unverified
+Mortgage,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Mortgage,Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,,disappeared; cause unverified
+Mortgage,Problem with credit report or credit score,2020-12,2021-05,,disappeared; cause unverified
+Mortgage,Problem with fraud alerts or security freezes,2017-05,2026-09,2017-07 2017-08 2017-09 2017-10 2017-11 2017-12 2018-01 2018-02 2018-04 2018-05 2018-06 2018-07 2018-09 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-09 2019-10 2019-11 2019-12 2020-01 2020-03 2020-04 2020-05 2020-06 2020-07 2020-12 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-07 2021-09 2021-10 2021-11 2021-12 2022-01 2022-06 2022-08 2022-11 2023-05 2023-06 2023-07 2023-11 2024-02 2024-03 2024-05 2024-06 2024-07 2024-08 2024-11 2024-12 2025-01 2025-02 2025-04 2025-05 2026-01 2026-05 2026-08,still observed
+Mortgage,Settlement process and costs,2011-12,2017-04,,disappeared; cause unverified
+Mortgage,Struggling to pay mortgage,2017-04,2026-09,,still observed
+Mortgage,Trouble during payment process,2017-04,2026-09,,still observed
+Mortgage,Unable to get your credit report or credit score,2017-04,2026-09,2017-07 2018-02 2018-06 2018-08 2018-10 2019-01 2019-04 2019-07 2019-08 2019-09 2019-12 2020-01 2020-08 2020-09 2021-07 2021-09 2021-11 2022-11 2023-02 2023-05 2023-11 2023-12 2024-01 2024-04 2024-06 2024-07 2024-08 2024-12 2025-02 2025-05 2026-04,still observed
+Other financial service,Advertising and marketing,2014-09,2017-04,2014-12 2015-01 2015-02 2015-07 2015-09 2015-12 2016-05 2016-07 2016-10 2017-02,disappeared; cause unverified
+Other financial service,Customer service/Customer relations,2014-07,2017-04,,disappeared; cause unverified
+Other financial service,Disclosures,2014-08,2017-04,2014-09 2015-04 2015-10 2015-11 2016-04 2016-05 2016-09 2016-11,disappeared; cause unverified
+Other financial service,Excessive fees,2014-08,2017-04,2014-12 2015-02 2015-04 2016-05 2017-03,disappeared; cause unverified
+Other financial service,Fraud or scam,2014-07,2017-04,,disappeared; cause unverified
+Other financial service,Incorrect exchange rate,2014-08,2016-11,2014-11 2014-12 2015-04 2015-05 2015-08 2015-09 2015-11 2015-12 2016-01 2016-05 2016-07 2016-08,disappeared; cause unverified
+Other financial service,Lost or stolen check,2014-07,2017-04,2014-11 2015-01 2015-05 2015-09 2015-11 2016-05 2016-06 2016-12 2017-02,disappeared; cause unverified
+Other financial service,Lost or stolen money order,2014-07,2017-04,2014-08 2014-11 2014-12 2015-01 2015-06 2015-09 2016-01 2016-05 2016-07 2016-09,disappeared; cause unverified
+Other financial service,Unexpected/Other fees,2014-08,2017-04,2014-10 2014-12 2016-02 2017-02,disappeared; cause unverified
+Payday loan,Applied for loan/did not receive money,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Can't contact lender,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Can't stop charges to bank account,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Charged bank acct wrong day or amt,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Charged fees or interest I didn't expect,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Payment to acct not credited,2013-11,2017-04,,disappeared; cause unverified
+Payday loan,Received a loan I didn't apply for,2013-11,2017-04,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Can't contact lender or servicer,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Can't stop withdrawals from your bank account,2017-05,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Charged fees or interest you didn't expect,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Credit limit changed,2017-04,2023-08,2018-01 2018-09 2019-12 2020-02 2022-02 2022-10,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Credit monitoring or identity theft protection services,2017-04,2023-07,2017-06 2017-08 2018-01 2018-02 2018-06 2018-08 2018-09 2018-10 2019-04 2019-08 2019-11 2020-01 2020-03 2020-04 2020-05 2020-06 2020-07 2021-02 2021-08 2022-02 2022-07 2022-12 2023-02 2023-05,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Getting a line of credit,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Getting the loan,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Improper use of your report,2017-04,2023-08,2019-03 2020-03 2020-10,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Incorrect information on your report,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Loan payment wasn't credited to your account,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Money was taken from your bank account on the wrong day or for the wrong amount,2017-05,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem when making payments,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,2019-02,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with additional add-on products or services,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with cash advance,2017-05,2023-08,2017-11 2018-02 2018-04 2018-05 2018-11 2019-05 2019-07 2020-03 2020-11 2022-08 2022-12 2023-02 2023-03,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with credit report or credit score,2017-08,2017-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with fraud alerts or security freezes,2017-07,2023-04,2017-08 2017-09 2017-10 2017-11 2017-12 2018-02 2018-03 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-11 2019-02 2019-03 2019-05 2019-06 2019-09 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-04 2021-06 2021-07 2021-08 2022-01 2022-03 2022-04 2022-08 2022-10 2022-12,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Problem with the payoff process at the end of the loan,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Property was damaged or destroyed property,2017-08,2023-03,2017-09 2017-10 2017-11 2018-01 2018-02 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-07 2020-08 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-07 2021-08 2021-09 2021-10 2021-11 2021-12 2022-01 2022-02 2022-03 2022-04 2022-05 2022-06 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12 2023-01 2023-02,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Property was sold,2017-05,2023-08,2017-06 2017-08 2017-10 2017-11 2017-12 2018-01 2018-03 2018-04 2018-05 2018-06 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-10 2020-11 2020-12 2021-01 2021-02 2021-05 2021-06 2021-07 2021-08 2021-09 2021-10 2021-11 2021-12 2022-01 2022-02 2022-03 2022-04 2022-05 2022-06 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12 2023-01 2023-02 2023-03 2023-04 2023-05 2023-06 2023-07,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Received a loan you didn't apply for,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Struggling to pay your loan,2017-04,2023-08,,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Unable to get your credit report or credit score,2017-08,2023-06,2017-09 2017-11 2017-12 2018-02 2018-03 2018-05 2018-06 2018-07 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-10 2019-11 2019-12 2020-02 2020-03 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2021-01 2021-02 2021-07 2021-08 2021-12 2022-01 2022-05 2022-06 2022-08 2022-09 2022-10 2023-02 2023-04,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Vehicle was damaged or destroyed the vehicle,2017-07,2023-08,2017-11 2018-03 2018-07 2019-11 2020-03 2020-06 2020-08 2020-10 2020-12 2021-01 2021-02 2021-05 2021-06 2021-07 2021-11 2022-04 2022-08 2023-03 2023-04,disappeared; cause unverified
+"Payday loan, title loan, or personal loan",Vehicle was repossessed or sold the vehicle,2017-05,2023-08,2021-09,disappeared; cause unverified
+"Payday loan, title loan, or personal loan","Was approved for a loan, but didn't receive money",2017-05,2023-07,2017-06 2017-10 2017-11 2017-12 2018-01 2018-02 2018-05 2018-07 2018-11 2018-12 2019-01 2019-02 2019-03 2020-01 2020-02 2020-04 2020-05 2020-06 2020-08 2020-11 2020-12 2021-01 2021-03 2021-05 2021-06 2021-08 2021-09 2022-01 2022-02 2022-04 2022-05 2023-01 2023-02 2023-05,disappeared; cause unverified
+"Payday loan, title loan, or personal loan","Was approved for a loan, but didn't receive the money",2017-05,2023-08,2018-10 2019-03 2022-05,disappeared; cause unverified
+"Payday loan, title loan, personal loan, or advance loan",Can't contact lender or servicer,2023-09,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Can't stop withdrawals from your bank account,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Charged fees or interest you didn't expect,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Confusing or misleading advertising or marketing,2023-08,2026-09,2023-10,still observed
+"Payday loan, title loan, personal loan, or advance loan",Confusing or missing disclosures,2023-09,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Credit limit changed,2023-09,2026-09,2024-06 2024-12 2025-03,still observed
+"Payday loan, title loan, personal loan, or advance loan",Credit monitoring or identity theft protection services,2023-08,2026-09,2024-05,still observed
+"Payday loan, title loan, personal loan, or advance loan",Getting a line of credit,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Getting the loan,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Improper use of your report,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Incorrect information on your report,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Issues with repayment,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Loan payment wasn't credited to your account,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Lost or stolen refund,2024-03,2026-09,2024-04 2024-07 2024-08 2024-12 2025-01 2025-02 2025-03 2025-05 2025-06 2025-08 2025-09 2025-11 2026-02 2026-03 2026-04 2026-06 2026-07 2026-08,still observed
+"Payday loan, title loan, personal loan, or advance loan",Money was taken from your bank account on the wrong day or for the wrong amount,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem when making payments,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem with additional add-on products or services,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem with cash advance,2023-09,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem with customer service,2024-12,2026-04,2025-01 2025-02 2025-03 2025-04 2025-05 2025-06 2025-07 2025-08 2025-09 2025-10 2025-11 2025-12 2026-01 2026-02,disappeared; cause unverified
+"Payday loan, title loan, personal loan, or advance loan",Problem with fraud alerts or security freezes,2023-09,2026-09,2023-11 2023-12 2024-03 2024-05 2024-07 2024-11,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problem with the payoff process at the end of the loan,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Problems receiving the advance,2023-09,2026-09,2023-12,still observed
+"Payday loan, title loan, personal loan, or advance loan",Property was damaged or destroyed property,2025-10,2026-09,2026-03 2026-04 2026-05 2026-06 2026-07 2026-08,still observed
+"Payday loan, title loan, personal loan, or advance loan",Property was sold,2023-12,2026-09,2024-01 2024-02 2024-03 2024-04 2024-05 2024-06 2024-07 2024-08 2024-11 2025-02 2025-03 2025-04 2025-06 2026-01 2026-02 2026-03 2026-04 2026-05 2026-06 2026-07 2026-08,still observed
+"Payday loan, title loan, personal loan, or advance loan",Received a loan you didn't apply for,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Struggling to pay your loan,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan",Unable to get your credit report or credit score,2023-09,2026-09,2023-12 2024-07 2024-08 2024-10 2024-12 2025-02 2025-09 2025-12 2026-02,still observed
+"Payday loan, title loan, personal loan, or advance loan",Unexpected fees,2023-09,2026-09,2024-05,still observed
+"Payday loan, title loan, personal loan, or advance loan",Vehicle was damaged or destroyed the vehicle,2023-09,2026-09,2023-12 2024-02 2024-04 2024-08 2024-09 2026-01 2026-08,still observed
+"Payday loan, title loan, personal loan, or advance loan",Vehicle was repossessed or sold the vehicle,2023-08,2026-09,,still observed
+"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive money",2023-08,2026-09,2023-09 2023-10 2023-11 2024-03 2024-12 2025-03 2025-04 2025-05 2025-06 2025-10,still observed
+"Payday loan, title loan, personal loan, or advance loan","Was approved for a loan, but didn't receive the money",2023-09,2026-09,,still observed
+Prepaid card,Adding money,2014-07,2017-04,2014-12,disappeared; cause unverified
+Prepaid card,Advertising,2023-08,2026-09,,still observed
+Prepaid card,"Advertising, marketing or disclosures",2014-07,2017-04,,disappeared; cause unverified
+Prepaid card,Fees,2014-07,2017-04,,disappeared; cause unverified
+Prepaid card,Fraud or scam,2014-07,2017-04,,disappeared; cause unverified
+Prepaid card,"Managing, opening, or closing account",2014-07,2017-04,,disappeared; cause unverified
+Prepaid card,Other,2014-07,2014-07,,disappeared; cause unverified
+Prepaid card,"Overdraft, savings or rewards features",2014-07,2017-04,2014-08 2014-09 2015-01 2015-06 2015-08 2015-09 2016-07 2016-12 2017-02,disappeared; cause unverified
+Prepaid card,Problem getting a card or closing an account,2023-08,2026-09,,still observed
+Prepaid card,Problem with a purchase or transfer,2023-08,2026-09,,still observed
+Prepaid card,Problem with overdraft,2023-09,2026-09,2024-08 2024-09 2026-08,still observed
+Prepaid card,Trouble using the card,2023-08,2026-09,,still observed
+Prepaid card,Unauthorized transactions/trans. issues,2014-07,2017-04,,disappeared; cause unverified
+Prepaid card,Unexpected or other fees,2023-08,2026-09,,still observed
+Student loan,Can't repay my loan,2012-03,2017-04,2012-04 2012-05 2012-06 2012-07 2012-09 2012-10 2012-11 2012-12 2013-01 2013-02 2013-03 2013-05 2013-07 2013-09,disappeared; cause unverified
+Student loan,Credit monitoring or identity theft protection services,2017-04,2026-09,2018-07 2018-10 2019-03 2019-12 2020-02 2020-03 2020-06 2021-01 2021-02 2021-11 2022-03 2022-05 2022-06 2022-08 2023-04 2023-05,still observed
+Student loan,Dealing with my lender or servicer,2012-03,2017-04,2012-04 2012-05 2012-07 2012-08 2012-11 2013-01 2013-03 2013-06 2013-07 2013-10,disappeared; cause unverified
+Student loan,Dealing with your lender or servicer,2017-04,2026-09,,still observed
+Student loan,Getting a loan,2012-03,2026-09,,still observed
+Student loan,Improper use of your report,2017-04,2026-09,2017-06 2017-07 2018-09 2018-11 2019-03 2019-04 2019-10 2019-11 2020-03 2020-08 2020-09 2021-03,still observed
+Student loan,Incorrect information on your report,2017-04,2026-09,,still observed
+Student loan,Issue where my lender is my school,2023-08,2026-09,,still observed
+Student loan,Issue with income share agreement,2023-08,2026-09,,still observed
+Student loan,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Student loan,Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,,disappeared; cause unverified
+Student loan,Problem with credit report or credit score,2017-10,2021-05,2017-11 2017-12 2018-01 2018-02 2018-03 2018-04 2018-05 2018-06 2018-07 2018-08 2018-09 2018-10 2018-11 2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2021-04,disappeared; cause unverified
+Student loan,Problem with fraud alerts or security freezes,2017-08,2026-09,2017-09 2017-10 2017-11 2017-12 2018-01 2018-02 2018-03 2018-06 2018-07 2018-08 2018-09 2018-10 2018-12 2019-06 2019-07 2019-09 2019-10 2019-11 2019-12 2020-04 2020-05 2020-06 2020-07 2020-09 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-07 2021-09 2021-10 2021-12 2022-03 2022-04 2022-05 2022-06 2022-08 2022-09 2022-11 2023-01 2023-02 2023-05 2023-06 2023-08 2023-09 2023-10 2023-11 2023-12 2024-01 2024-02 2024-05 2024-06 2024-08 2024-12,still observed
+Student loan,Problems when you are unable to pay,2012-03,2014-05,2014-01 2014-03 2014-04,disappeared; cause unverified
+Student loan,Repaying your loan,2012-03,2014-12,2014-04 2014-06 2014-07 2014-08 2014-09 2014-10 2014-11,disappeared; cause unverified
+Student loan,Struggling to repay your loan,2017-04,2026-09,,still observed
+Student loan,Unable to get your credit report or credit score,2017-10,2026-09,2017-12 2018-01 2018-03 2018-04 2018-05 2018-08 2018-09 2019-02 2019-03 2019-04 2019-06 2019-07 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-05 2020-06 2020-07 2020-09 2020-10 2020-11 2021-01 2021-02 2021-03 2021-04 2021-05 2021-06 2021-08 2021-09 2021-10 2021-11 2021-12 2022-01 2022-03 2022-04 2022-05 2022-06 2022-07 2022-08 2022-09 2022-11 2022-12 2023-01 2023-02 2023-03 2023-04 2023-05 2023-06 2023-08 2023-10 2023-12 2024-02 2024-04 2024-06 2024-09 2025-10 2026-06 2026-07,still observed
+Vehicle loan or lease,Credit monitoring or identity theft protection services,2017-04,2026-09,2017-05 2017-06 2018-10 2019-03 2019-04 2019-09 2020-11 2021-01 2021-12 2022-01 2022-02 2022-03 2022-10 2023-07,still observed
+Vehicle loan or lease,Getting a loan or lease,2017-04,2026-09,,still observed
+Vehicle loan or lease,Improper use of your report,2017-05,2026-09,2017-08,still observed
+Vehicle loan or lease,Incorrect information on your report,2017-04,2026-09,,still observed
+Vehicle loan or lease,Managing the loan or lease,2017-04,2026-09,,still observed
+Vehicle loan or lease,Problem with a company's investigation into an existing problem,2023-08,2026-09,,still observed
+Vehicle loan or lease,Problem with a credit reporting company's investigation into an existing problem,2017-04,2023-08,,disappeared; cause unverified
+Vehicle loan or lease,Problem with credit report or credit score,2018-11,2025-12,2018-12 2019-01 2019-02 2019-03 2019-04 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-03 2020-04 2020-05 2020-06 2020-07 2020-08 2020-09 2020-10 2020-11 2021-06 2021-07 2021-08 2021-09 2021-10 2021-11 2021-12 2022-01 2022-02 2022-03 2022-04 2022-05 2022-06 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12 2023-01 2023-02 2023-03 2023-04 2023-05 2023-06 2023-07 2023-08 2023-09 2023-10 2023-11 2023-12 2024-01 2024-02 2024-03 2024-04 2024-05 2024-06 2024-07 2024-08 2024-09 2024-10 2024-11 2024-12 2025-01 2025-02 2025-03 2025-04 2025-05 2025-06 2025-07 2025-08 2025-09 2025-10 2025-11,disappeared; cause unverified
+Vehicle loan or lease,Problem with fraud alerts or security freezes,2017-10,2026-08,2017-11 2017-12 2018-01 2018-02 2018-03 2018-04 2018-05 2018-06 2018-08 2018-09 2018-11 2018-12 2019-01 2019-02 2019-03 2019-05 2019-06 2019-07 2019-08 2019-09 2019-10 2019-12 2020-01 2020-02 2020-04 2020-06 2020-07 2020-08 2020-10 2020-11 2021-01 2021-02 2021-04 2021-07 2021-08 2021-09 2021-10 2021-11 2022-01 2022-02 2022-03 2022-04 2022-07 2022-08 2022-09 2022-10 2022-11 2022-12 2023-02 2023-03 2023-05 2023-06 2023-07 2023-08 2023-09 2023-10 2023-12 2024-01 2024-04 2024-05 2024-07 2024-09 2024-11 2025-06 2025-07 2025-12 2026-04 2026-06,disappeared; cause unverified
+Vehicle loan or lease,Problems at the end of the loan or lease,2017-04,2026-09,,still observed
+Vehicle loan or lease,Repossession,2023-08,2026-09,,still observed
+Vehicle loan or lease,Struggling to pay your loan,2017-04,2026-09,,still observed
+Vehicle loan or lease,Unable to get your credit report or credit score,2017-05,2026-09,2017-07 2017-08 2017-09 2017-10 2017-11 2018-04 2018-07 2018-08 2018-09 2019-01 2019-03 2019-05 2019-09 2019-10 2019-11 2019-12 2020-01 2020-02 2020-06 2020-10 2020-11 2020-12 2021-01 2021-02 2021-03 2021-05 2021-11 2021-12 2022-01 2022-03 2022-05 2022-12 2023-06 2026-02 2026-08,still observed
+Virtual currency,Fraud or scam,2015-10,2016-03,2015-11 2015-12 2016-01 2016-02,disappeared; cause unverified
+Virtual currency,Money was not available when promised,2015-04,2015-04,,disappeared; cause unverified
+Virtual currency,Other service issues,2015-09,2017-02,2015-11 2015-12 2016-01 2016-02 2016-04 2016-05 2016-07 2016-08 2016-09 2016-12,disappeared; cause unverified
+Virtual currency,Other transaction issues,2014-08,2017-04,2014-09 2014-10 2014-11 2014-12 2015-01 2015-02 2015-03 2015-04 2015-05 2015-06 2015-07 2015-08 2015-09 2015-10 2015-11 2015-12 2016-01 2016-02 2016-03 2016-04 2016-05 2016-07 2016-08 2016-09 2016-11 2016-12 2017-01 2017-02 2017-03,disappeared; cause unverified

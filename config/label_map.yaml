@@ -1,0 +1,93 @@
+version: 1
+unseen: Other
+labels:
+  Advertising: Other
+  Advertising and marketing, including promotional offers: Other
+  Applying for a mortgage or refinancing an existing mortgage: Other
+  Attempts to collect debt not owed: Attempts to collect debt not owed
+  Can't contact lender or servicer: Other
+  Can't stop withdrawals from your bank account: Other
+  Charged fees or interest you didn't expect: Other
+  Charged upfront or unexpected fees: Other
+  Closing an account: Other
+  Closing on a mortgage: Other
+  Closing your account: Other
+  Communication tactics: Other
+  Confusing or misleading advertising or marketing: Other
+  Confusing or missing disclosures: Other
+  Credit limit changed: Other
+  Credit monitoring or identity theft protection services: Other
+  Dealing with your lender or servicer: Dealing with your lender or servicer
+  Didn't provide services promised: Other
+  Electronic communications: Other
+  False statements or representation: Other
+  Fees or interest: Other
+  Fraud or scam: Other
+  Getting a credit card: Getting a credit card
+  Getting a line of credit: Other
+  Getting a loan: Other
+  Getting a loan or lease: Other
+  Getting the loan: Other
+  Identity theft protection or other monitoring services: Other
+  Improper use of your report: Improper use of your report
+  Incorrect exchange rate: Other
+  Incorrect information on your report: Incorrect information on your report
+  Issue where my lender is my school: Other
+  Issue with income share agreement: Other
+  Issues with repayment: Other
+  Loan payment wasn't credited to your account: Other
+  Lost or stolen money order: Other
+  Lost or stolen refund: Other
+  Managing an account: Managing an account
+  Managing the loan or lease: Other
+  Managing, opening, or closing your mobile wallet account: Other
+  Money was not available when promised: Other
+  Money was taken from your bank account on the wrong day or for the wrong amount: Other
+  Opening an account: Other
+  Other features, terms, or problems: Other
+  Other service problem: Other
+  Other transaction problem: Other
+  Overdraft, savings, or rewards features: Other
+  Problem adding money: Other
+  Problem caused by your funds being low: Other
+  Problem getting a card or closing an account: Other
+  Problem when making payments: Other
+  Problem with a company's investigation into an existing issue: Other
+  Problem with a company's investigation into an existing problem: Problem with a
+    company's investigation into an existing problem
+  Problem with a lender or other company charging your account: Other
+  Problem with a purchase or transfer: Other
+  Problem with a purchase shown on your statement: Problem with a purchase shown on
+    your statement
+  Problem with additional add-on products or services: Other
+  Problem with cash advance: Other
+  Problem with customer service: Other
+  Problem with fraud alerts or security freezes: Other
+  Problem with overdraft: Other
+  Problem with the payoff process at the end of the loan: Other
+  Problems at the end of the loan or lease: Other
+  Problems receiving the advance: Other
+  Property was sold: Other
+  Received a loan you didn't apply for: Other
+  Repossession: Other
+  Struggling to pay mortgage: Other
+  Struggling to pay your bill: Other
+  Struggling to pay your loan: Other
+  Struggling to repay your loan: Other
+  Threatened to contact someone or share information improperly: Other
+  Took or threatened to take negative or legal action: Other
+  Trouble accessing funds in your mobile or digital wallet: Other
+  Trouble during payment process: Trouble during payment process
+  Trouble using the card: Other
+  Trouble using your card: Other
+  Unable to get your credit report or credit score: Other
+  Unauthorized transactions or other transaction problem: Other
+  Unauthorized withdrawals or charges: Other
+  Unexpected fees: Other
+  Unexpected or other fees: Other
+  Vehicle was damaged or destroyed the vehicle: Other
+  Vehicle was repossessed or sold the vehicle: Other
+  Was approved for a loan, but didn't receive money: Other
+  Was approved for a loan, but didn't receive the money: Other
+  Written notification about debt: Written notification about debt
+  Wrong amount charged or received: Other

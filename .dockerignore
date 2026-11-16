@@ -47,3 +47,9 @@ logs/
 *.log
 *.tmp
 *.part
+
+!tests/fixtures/*.parquet
+!reports/*.parquet
+!reports/*.csv
+!sql/issue_crosswalk.csv
+!docs/backtest_events.csv

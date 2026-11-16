@@ -1,0 +1,16 @@
+version: 1
+date_field: Date received
+train: [2023-09-01, 2024-03-31]
+validation: [2024-04-01, 2024-07-31]
+test: [2024-08-01, 2024-10-31]
+seed: 427
+archive_exports: [5, 6, 7]
+sample_caps: {train: 5000, validation: 2000, test: 2000}
+bootstrap_resamples: 1000
+calibration_bins: 10
+thresholds: [0.5, 0.6, 0.7, 0.8, 0.9]
+validation_min_precision: 0.80
+duplicate_jaccard: 0.95
+minhash_permutations: 64
+encoder: sentence-transformers/all-MiniLM-L6-v2
+encoder_revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41

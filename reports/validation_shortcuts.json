@@ -1,0 +1,22 @@
+{
+  "original": {
+    "accuracy": 0.6044260027662517,
+    "macro_f1": 0.4358274720258411,
+    "changed_vs_original": 0
+  },
+  "redaction_mask_removed": {
+    "accuracy": 0.6085753803596127,
+    "macro_f1": 0.4235452688613936,
+    "changed_vs_original": 83
+  },
+  "repeated_training_lines_removed": {
+    "accuracy": 0.6051175656984785,
+    "macro_f1": 0.43628030431108356,
+    "changed_vs_original": 7
+  },
+  "length_redaction_and_line_count_only": {
+    "accuracy": 0.3478561549100968,
+    "macro_f1": 0.07830705366983222,
+    "changed_vs_original": 803
+  }
+}

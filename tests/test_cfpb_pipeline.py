@@ -84,7 +84,7 @@ class CFPBSourcePipelineTests(unittest.TestCase):
             )
         rows.extend(
             {
-                "complaint_month": f"2024-01",
+                "complaint_month": "2024-01",
                 "issue": issue,
                 "complaint_count": count,
                 "monthly_denominator": 100,
