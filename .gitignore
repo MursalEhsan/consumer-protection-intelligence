@@ -49,3 +49,5 @@ logs/
 *.log
 *.tmp
 *.part
+
+docs/development/
