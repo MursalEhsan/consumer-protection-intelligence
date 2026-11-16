@@ -10,15 +10,13 @@ from sklearn.preprocessing import normalize
 from hdbscan import HDBSCAN
 from umap import UMAP
 from detector import ROOT, forecast, tail
-from fresh_data import TEXT
+
+TEXT = "Consumer complaint narrative"
 
 CFG = yaml.safe_load((ROOT / "config/clusters.yaml").read_text())
 
 
-def run() -> None:
-    folder = ROOT / "output/clusters"
-    d = pd.read_parquet(folder / "sample.parquet")
-    vec = np.load(folder / "embedding.npy")
+def track(d: pd.DataFrame, vec: np.ndarray) -> pd.DataFrame:
     dates = pd.to_datetime(d["Date received"]).dt.to_period("M")
     # Fixed public vocabulary prevents export of names or identifiers in keyword labels.
     terms = sorted(
@@ -96,11 +94,14 @@ def run() -> None:
                         growth,
                     )
                 )
-    pd.DataFrame(
+    return pd.DataFrame(
         rows,
         columns=["month", "product", "cluster", "sample_count", "modal_issue", "keywords", "new", "growth"],
-    ).to_csv(ROOT / "reports/clusters.csv", index=False)
+    )
 
 
 if __name__ == "__main__":
-    run()
+    folder = ROOT / "output/clusters"
+    track(pd.read_parquet(folder / "sample.parquet"), np.load(folder / "embedding.npy")).to_csv(
+        ROOT / "reports/clusters.csv", index=False
+    )

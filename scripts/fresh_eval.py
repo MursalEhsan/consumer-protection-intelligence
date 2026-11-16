@@ -13,16 +13,15 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 import yaml
-from scipy.optimize import minimize_scalar
 from scipy.special import softmax
 from scipy.stats import binomtest
 from sklearn.dummy import DummyClassifier
-from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
-from sklearn.pipeline import Pipeline, make_pipeline
-from sklearn.svm import LinearSVC
+from sklearn.pipeline import Pipeline
+from linear_training import make_text_model, calibrate
 from fresh_data import CFG, ID, ROOT, TEXT, DuplicateFilter, load_split
 
 OUT = ROOT / "reports"
@@ -84,12 +83,7 @@ def fit(directory: Path) -> None:
                 strategy="most_frequent" if name == "majority" else "stratified", random_state=SEED
             )
         elif name.startswith("tfidf"):
-            clf = (
-                LinearSVC(random_state=SEED)
-                if name.endswith("svc")
-                else LogisticRegression(max_iter=500, random_state=SEED)
-            )
-            model = make_pipeline(TfidfVectorizer(ngram_range=(1, 2), min_df=2, sublinear_tf=True), clf)
+            model = make_text_model(name, SEED)
         else:
             x, v = embedding(x), embedding(v)
             model = LogisticRegression(max_iter=500, random_state=SEED)
@@ -100,19 +94,7 @@ def fit(directory: Path) -> None:
         if name not in ("majority", "stratified"):
             s = logits(model, v)
             y = targets(va)
-            k = len(y) // 2
-            temp = minimize_scalar(
-                lambda t: -np.log(softmax(s[:k] / t, axis=1)[np.arange(k), y[:k]].clip(1e-12)).mean(),
-                bounds=(0.1, 10),
-                method="bounded",
-            )
-            t = float(temp.x)
-            prob = softmax(s[k:] / t, axis=1)
-            for cut in CFG["thresholds"]:
-                mask = prob.max(1) >= cut
-                if mask.any() and np.mean(pred[k:][mask] == y[k:][mask]) >= CFG["validation_min_precision"]:
-                    threshold = cut
-                    break
+            t, threshold = calibrate(s, pred, y, CFG["thresholds"], CFG["validation_min_precision"])
         models[name] = model
         validation[name] = {"validation_macro_f1": score, "temperature": t, "threshold": threshold}
     best = max(list(models)[2:], key=lambda n: validation[n]["validation_macro_f1"])
