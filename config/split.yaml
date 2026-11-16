@@ -1,0 +1,7 @@
+version: 1
+date_field: Date received
+train: [2023-09-01, 2024-03-31]
+validation: [2024-04-01, 2024-07-31]
+test: [2024-08-01, 2024-10-31]
+seed: 427
+archive_exports: [5, 6, 7]
