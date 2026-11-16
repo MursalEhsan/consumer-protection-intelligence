@@ -1,0 +1,10 @@
+{
+  "mean": 0.4,
+  "interval": [
+    0.0,
+    0.782608695652174
+  ],
+  "earlier": 3,
+  "later": 1,
+  "both_missed": 10
+}

@@ -1,45 +1,48 @@
 # Consumer Protection Intelligence
 
-An evidence-led CFPB complaint case study.
+A [financial regulator analyst](docs/client_brief.md) uses the [watchlist](reports/watchlist.csv) to choose which changes in published complaint categories to investigate.
 
-## What changed in the complaint mix?
+[![CI](https://github.com/MursalEhsan/consumer-protection-intelligence/actions/workflows/verify.yml/badge.svg?branch=remediation%2Fevidence-audit)](https://github.com/MursalEhsan/consumer-protection-intelligence/actions/workflows/verify.yml) · [Run the viewer or deploy it](docs/deployment.md) · [Released historical model](config/model_asset.json)
 
-**September 2026:** `Incorrect information on your report` accounted for **371,428 of 660,839 valid-date complaints (56.21%)**. In September 2025, the same label accounted for **267,731 of 503,847 (53.14%)**, a **3.07 percentage-point increase**. These are full-source aggregates, not capped-sample counts; complete months satisfy the 15-day maturity rule.
+## Which detector earned its place?
 
-![Monthly CFPB complaint share for Incorrect information on your report, October 2023–September 2026; September 2026 was 56.21%, versus 53.14% in September 2025.](reports/issue_trends.png)
+The retained seasonal rule matched **2 of 15** public actions, with a median delay of 1 month among matches. The seasonal count model matched 1. EWMA matched more actions and generated more unmatched alerts. [Backtest and comparison criteria](reports/backtest.md) · [Synthetic spike results](reports/spike_power.csv)
 
-- **View SQL:** [Year-over-year comparison](sql/year_over_year_issue_comparison.sql) · [Monthly trend view](sql/monthly_issue_trends.sql)
-- **Read the report:** [Dated results and methods](reports/structured_trends.md)
+![Actions matched by each method](reports/event_recall.png)
 
-The query matches the exact label and calendar months; each share uses all valid-date complaints in that month. This description is not causal or representative of all consumer experiences. See the [source assessment](docs/CFPB_SOURCE_ASSESSMENT.md) and [technical report](docs/technical_report.md).
+## Did narratives give earlier warning?
 
-No issue was flagged in September 2026. Screening requires 50 complaints and three prior observed same-calendar-month values, then flags increases of at least three sample standard deviations. Missing rows are not imputed as zero. A June flag involves non-harmonized investigation labels; details are in the report.
+The restricted mean advantage over the retained rule was **0.40 months**. The event-month bootstrap interval ranged from 0.00 to 0.78 months. Misses count at the end of the observation horizon. [Lead estimates](reports/lead_vs_retained.json) · [All events, including misses](reports/lead_vs_retained.csv) · [Cases](reports/case_studies.md)
 
-**Optional:** The historical narrative model uses archive exports, not current complaint text. See the [evaluation audit](EVALUATION_AUDIT.md) and [model card](docs/model_card.md).
+![Paired event offsets](reports/retained_lead.png)
 
-## Local reproduction
+## Can complaint text predict its recorded category?
 
-Requires Python 3.10+ and internet access to retrieve CFPB's public structured archive (about 365 MB compressed at the reviewed URL).
+On 1,354 held-out historical narratives, LinearSVC achieved **0.395 macro-F1** (95% interval 0.338 to 0.445). The constant predictor scored 0.046 (0.044 to 0.049). In this run the training and test majorities coincided. [Frozen experiment](reports/classifier_eval.md) · [Metrics and run commit](reports/metrics.json) · [Calibration](reports/reliability.png)
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-make setup
-make run
-make report
-make test
-make app
+![Macro F1 for the frozen classifier and constant comparator](reports/macro_f1.png)
+
+## Pipeline
+
+```mermaid
+flowchart LR
+  Bulk[Structured archive] --> Counts[Monthly product and issue counts] --> Replay[Detector replay] --> Watch[Watchlist]
+  Archive[Narrative archive] --> Classifier[Frozen classifier] --> Demo[Abstaining demo]
+  Archive --> Clusters[Rolling clusters] --> Events[Event comparison]
 ```
 
-`make run` scans the public structured archive and produces ignored local aggregates and manifests. `make report` reruns that pipeline and regenerates the aggregate-only report and chart under `reports/`. `make narrative-model` downloads selected official archive exports and rebuilds the historical model; it is not needed to reproduce the structured report and was not run for this review. `make app` binds Streamlit to `127.0.0.1:8501`. No dashboard deployment is configured.
+[Structured code](scripts/detector.py) · [Classifier code](scripts/fresh_eval.py) · [Cluster code](scripts/clusters.py)
 
-## Repository map
+## Quickstart
 
-- [`reports/`](reports/) - dated aggregate-only structured result and chart; no narrative text or complaint IDs
-- [`sql/monthly_issue_trends.sql`](sql/monthly_issue_trends.sql) - SQL view for full-source counts and shares
-- [`EVALUATION_AUDIT.md`](EVALUATION_AUDIT.md) - archived classifier evaluation, baselines, taxonomy shift, and caveats
-- [`docs/`](docs/) - source, data, modeling, and interpretation methods
-- [`docs/development/`](docs/development/) - handoff and interview preparation notes
-- [`src/`](src/) and [`tests/`](tests/) - implementation and regression/unit tests
+Run `make demo` for the synthetic fixture and `make test` for the regression suite. For the viewer, install the [runtime lock](requirements.lock) in a Python 3.12 environment and run `make app`. [Make targets](Makefile) · [Deployment instructions](docs/deployment.md)
 
-Raw exports, local samples, complaint text, generated manifests, databases, and trained model files are excluded from Git.
+## Limitations
+
+- Complaints reflect selective reporting. [Source assessment](docs/CFPB_SOURCE_ASSESSMENT.md)
+- Taxonomy harmonization is partial. [Coverage audit](reports/taxonomy_coverage.csv)
+- Announcements can follow incidents, and unmatched alerts lack independent adjudication. [Event register](docs/backtest_events.csv)
+- Historical archive performance can drift. [Model card](docs/model_card.md)
+- Revised monthly data cannot recreate all earlier publication vintages. [Technical report](docs/technical_report.md)
+
+[Client brief](docs/client_brief.md) · [Classifier audit](EVALUATION_AUDIT.md) · [Backtest](reports/backtest.md) · [Remediation log](docs/remediation_log.md)
