@@ -26,3 +26,7 @@ report: run
 
 clean:
 	rm -f complaints_warehouse.db
+
+.PHONY: demo
+demo:
+	PYTHONPATH=src:scripts python3 -c "from pathlib import Path; import pandas as pd; from detector import replay; x=replay(pd.read_parquet('tests/fixtures/monthly.parquet')); target=Path('output/demo'); target.mkdir(parents=True,exist_ok=True); x.to_parquet(target/'scores.parquet',index=False); assert x.glm.any(); print('Synthetic product detector smoke test passed')"
